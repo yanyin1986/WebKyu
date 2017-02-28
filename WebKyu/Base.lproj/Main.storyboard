@@ -66,7 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Don-JR-LoZ">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="setting" style="plain" id="N57-CR-oxe">
+                        <barButtonItem key="leftBarButtonItem" image="setting" id="N57-CR-oxe">
                             <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="z42-LG-9ug" kind="show" id="DwV-gK-znQ"/>
@@ -94,7 +94,7 @@
         <!--Setting-->
         <scene sceneID="6Wv-56-gdZ">
             <objects>
-                <viewController title="Setting" id="z42-LG-9ug" sceneMemberID="viewController">
+                <viewController title="Setting" id="z42-LG-9ug" customClass="SettingViewController" customModule="WebKyu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iZO-7T-KT9"/>
                         <viewControllerLayoutGuide type="bottom" id="OzB-Xf-V8Q"/>
@@ -116,6 +116,9 @@
                             <constraint firstItem="Wvb-bc-duc" firstAttribute="top" secondItem="tgo-dd-lqK" secondAttribute="top" id="fVB-hv-gqm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Wvb-bc-duc" id="YqI-oU-d1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyJ-JE-69d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,7 @@
 		2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF21E65421500C6D9F7 /* Main.storyboard */; };
 		2CC64DF61E65421500C6D9F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF51E65421500C6D9F7 /* Assets.xcassets */; };
 		2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF71E65421500C6D9F7 /* LaunchScreen.storyboard */; };
+		3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2CC64DF51E65421500C6D9F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CC64DF81E65421500C6D9F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CC64DFA1E65421500C6D9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.release.xcconfig"; sourceTree = "<group>"; };
+		AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebKyu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2CC64DED1E65421500C6D9F7 /* WebKyu */,
 				2CC64DEC1E65421500C6D9F7 /* Products */,
+				8BBDC6BED416C17FAD30269F /* Pods */,
+				4F2155BF0E05F2F1EDEAFD57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = WebKyu;
 			sourceTree = "<group>";
 		};
+		4F2155BF0E05F2F1EDEAFD57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BBDC6BED416C17FAD30269F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */,
+				7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CC64DFD1E65421500C6D9F7 /* Build configuration list for PBXNativeTarget "WebKyu" */;
 			buildPhases = (
+				4F5B485C9B24CA29D6D7E652 /* [CP] Check Pods Manifest.lock */,
 				2CC64DE71E65421500C6D9F7 /* Sources */,
 				2CC64DE81E65421500C6D9F7 /* Frameworks */,
 				2CC64DE91E65421500C6D9F7 /* Resources */,
+				386DA250839828C961DD4AC4 /* [CP] Embed Pods Frameworks */,
+				FEDDF4038CDBC5BE718C1983 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		386DA250839828C961DD4AC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5B485C9B24CA29D6D7E652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEDDF4038CDBC5BE718C1983 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CC64DE71E65421500C6D9F7 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		2CC64DFE1E65421500C6D9F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;
@@ -272,6 +348,7 @@
 		};
 		2CC64DFF1E65421500C6D9F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;

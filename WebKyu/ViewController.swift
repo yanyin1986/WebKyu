@@ -12,8 +12,18 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    var _imageCount: Int = 0
+   
     var _webView: UIWebView?
-    @IBOutlet weak var _webContainer: UIView!
+    
+    @IBOutlet
+    weak var _webContainer: UIView!
+    
+    @IBOutlet
+    weak var _countButton: UIButton!
+    
+    private var _timer: Timer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +65,29 @@ class ViewController: UIViewController {
             
             //
             URLProtocol.registerClass(MDURLProtocol.self)
+            _timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
+                self.checkImages()
+            })
         }
         _webView!.loadRequest(URLRequest(url: url))
+    }
+    
+    func checkImages() {
+        let images = Global.share.images(withFilterOptions: nil)
+        
+        if _imageCount != images.count {
+            _imageCount = images.count
+            
+            _countButton.setTitle("\(_imageCount)", for: .normal)
+            UIView.animate(withDuration: 0.15, animations: {
+                self._countButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }, completion: { (_) in
+                UIView.animate(withDuration: 0.15, animations: { 
+                    self._countButton.transform = CGAffineTransform.identity
+                }, completion: nil)
+            })
+        }
+        
     }
 }
 

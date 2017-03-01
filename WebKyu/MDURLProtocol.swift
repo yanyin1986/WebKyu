@@ -47,7 +47,6 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
         
         if (scheme == "http" || scheme == "https")
             && !url.path.hasSuffix("css") && !url.path.hasSuffix("js") && !url.path.hasSuffix("woff") {
-//            && (url.path.contains("gif") || url.path.contains("png") || url.path.contains("jpg")) {
             return true
         }
         return false
@@ -66,13 +65,14 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
         let cacheResult = imageCache.isImageCached(forKey: request.url!.absoluteString)
         if cacheResult.cached {
             let path = imageCache.cachePath(forKey: request.url!.absoluteString)
+            print(path)
             do {
                 let data = try Data.init(contentsOf: URL(fileURLWithPath: path))
                 self.client?.urlProtocol(self, didLoad: data)
-                self.client?.urlProtocolDidFinishLoading(self)
             } catch {
                 self.client?.urlProtocol(self, didFailWithError: error)
             }
+            self.client?.urlProtocolDidFinishLoading(self)
         } else {
             let configuration = URLSessionConfiguration.default;
             let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
@@ -84,6 +84,7 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
     override func stopLoading() {
         _dataTask?.cancel()
         _dataTask = nil
+        _data = nil
     }
     
     func urlSession(_ session: URLSession,
@@ -136,13 +137,12 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
         if let err = error as? URLError, err.code != .cancelled {
             self.client?.urlProtocol(self, didFailWithError: err)
         } else {
-            if _trackRequirable == .yes {
+            if _trackRequirable == .yes && _data != nil {
                 let imageCache = MDStoreage.shared.imageCache()
                 imageCache.store(DefaultCacheSerializer.default.image(with: _data!, options: nil)!,
                                  original: _data,
                                  forKey: task.currentRequest!.url!.absoluteString,
                                  toDisk: true, completionHandler: nil)
-                self.client?.urlProtocolDidFinishLoading(self)
                 guard let source = CGImageSourceCreateWithData(_data! as CFData, nil) else {
                     return
                 }
@@ -164,12 +164,16 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
                     size.height = CGFloat(height.doubleValue)
                 }
                 
-                print(task.currentRequest?.url?.absoluteString)
-                print("image size => \(size)")
-                
+                let image = Image(url: task.currentRequest!.url!,
+                                  cacheKey: task.currentRequest!.url!.absoluteString,
+                                  mimeType: _mimeType,
+                                  size: size,
+                                  fileLength: Int64(_data!.count))
+                Global.share.add(image: image)
             }
         }
         
         _data = nil
+        self.client?.urlProtocolDidFinishLoading(self)
     }
 }

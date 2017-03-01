@@ -53,7 +53,8 @@ class ViewController: UIViewController {
                 make.bottom.equalTo(_webContainer.snp.bottom).offset(-bottom)
             })
             
-            
+            //
+            URLProtocol.registerClass(MDURLProtocol.self)
         }
         _webView!.loadRequest(URLRequest(url: url))
     }

@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134B61E666DCC0068903E /* Data+MIMEType.swift */; };
 		2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */; };
 		2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DF01E65421500C6D9F7 /* ViewController.swift */; };
 		2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF21E65421500C6D9F7 /* Main.storyboard */; };
 		2CC64DF61E65421500C6D9F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF51E65421500C6D9F7 /* Assets.xcassets */; };
 		2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF71E65421500C6D9F7 /* LaunchScreen.storyboard */; };
 		2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E001E65609200C6D9F7 /* SettingViewController.swift */; };
+		2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E061E65623900C6D9F7 /* Storeage.swift */; };
+		2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */; };
 		3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4134B61E666DCC0068903E /* Data+MIMEType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+MIMEType.swift"; sourceTree = "<group>"; };
 		2CC64DEB1E65421500C6D9F7 /* WebKyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebKyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC64DF01E65421500C6D9F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +29,9 @@
 		2CC64DF81E65421500C6D9F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CC64DFA1E65421500C6D9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CC64E001E65609200C6D9F7 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2CC64E041E6561EA00C6D9F7 /* WebKyu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebKyu.entitlements; sourceTree = "<group>"; };
+		2CC64E061E65623900C6D9F7 /* Storeage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storeage.swift; sourceTree = "<group>"; };
+		2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDURLProtocol.swift; sourceTree = "<group>"; };
 		7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.release.xcconfig"; sourceTree = "<group>"; };
 		AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebKyu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4134B51E666D710068903E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C4134B61E666DCC0068903E /* Data+MIMEType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2CC64DE21E65421500C6D9F7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +78,10 @@
 		2CC64DED1E65421500C6D9F7 /* WebKyu */ = {
 			isa = PBXGroup;
 			children = (
+				2C4134B51E666D710068903E /* Utils */,
+				2CC64E051E65621C00C6D9F7 /* Storeage */,
+				2CC64E041E6561EA00C6D9F7 /* WebKyu.entitlements */,
+				2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */,
 				2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */,
 				2CC64DF01E65421500C6D9F7 /* ViewController.swift */,
 				2CC64E001E65609200C6D9F7 /* SettingViewController.swift */,
@@ -72,6 +91,14 @@
 				2CC64DFA1E65421500C6D9F7 /* Info.plist */,
 			);
 			path = WebKyu;
+			sourceTree = "<group>";
+		};
+		2CC64E051E65621C00C6D9F7 /* Storeage */ = {
+			isa = PBXGroup;
+			children = (
+				2CC64E061E65623900C6D9F7 /* Storeage.swift */,
+			);
+			path = Storeage;
 			sourceTree = "<group>";
 		};
 		4F2155BF0E05F2F1EDEAFD57 /* Frameworks */ = {
@@ -128,6 +155,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3Z3K367TN7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -218,6 +250,9 @@
 				2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */,
 				2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */,
 				2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */,
+				2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */,
+				2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */,
+				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +376,7 @@
 			baseConfigurationReference = F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +391,7 @@
 			baseConfigurationReference = 7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

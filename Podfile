@@ -4,4 +4,5 @@ use_frameworks!
 target 'WebKyu' do
     pod 'SnapKit', '~> 3.2.0'
     pod 'Kingfisher'
+	pod 'Firebase/Core'
 end

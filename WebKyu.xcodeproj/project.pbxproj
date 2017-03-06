@@ -21,6 +21,7 @@
 		2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E061E65623900C6D9F7 /* Storeage.swift */; };
 		2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */; };
 		3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */; };
+		F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.release.xcconfig"; sourceTree = "<group>"; };
 		AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebKyu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.debug.xcconfig"; sourceTree = "<group>"; };
+		F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				2CC64DF51E65421500C6D9F7 /* Assets.xcassets */,
 				2CC64DF71E65421500C6D9F7 /* LaunchScreen.storyboard */,
 				2CC64DFA1E65421500C6D9F7 /* Info.plist */,
+				F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */,
 				2C4134B81E6672F70068903E /* Global.swift */,
 				2C4134BA1E6673980068903E /* Image.swift */,
 			);
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */,
+				F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */,
 				2CC64DF61E65421500C6D9F7 /* Assets.xcassets in Resources */,
 				2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */,
 			);

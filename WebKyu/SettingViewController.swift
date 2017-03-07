@@ -15,8 +15,6 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,12 +33,27 @@ extension SettingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if section == 0 {
+            return 2
+        } else {// if section == 1 {
+            return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "image size"
+        } else {
+            return "image type"
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if indexPath.section == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "limitCell", for: indexPath)
+        } else {
+            return tableView.dequeueReusableCell(withIdentifier: "toggleCell", for: indexPath)
+        }
         
-        return cell
     }
 }

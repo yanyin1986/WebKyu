@@ -104,7 +104,6 @@ class ViewController: UIViewController {
         _filterButton.isEnabled = sender.isSelected
         _countButton.isEnabled = sender.isSelected
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {

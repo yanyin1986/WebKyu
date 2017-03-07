@@ -24,6 +24,10 @@
 		F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7767F5C1E6E4591004062E6 /* Assets.xcassets */; };
 		F7767F5F1E6E486E004062E6 /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F5E1E6E486E004062E6 /* CountButton.swift */; };
 		F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F601E6E49E1004062E6 /* CGGeometry+.swift */; };
+		F7767F651E6E5164004062E6 /* SettingLimitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F641E6E5164004062E6 /* SettingLimitCell.swift */; };
+		F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F661E6E5174004062E6 /* SettingToggleCell.swift */; };
+		F7767F691E6E517F004062E6 /* SettingCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F681E6E517F004062E6 /* SettingCheckCell.swift */; };
+		F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		F7767F5C1E6E4591004062E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7767F5E1E6E486E004062E6 /* CountButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountButton.swift; sourceTree = "<group>"; };
 		F7767F601E6E49E1004062E6 /* CGGeometry+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+.swift"; sourceTree = "<group>"; };
+		F7767F641E6E5164004062E6 /* SettingLimitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingLimitCell.swift; sourceTree = "<group>"; };
+		F7767F661E6E5174004062E6 /* SettingToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingToggleCell.swift; sourceTree = "<group>"; };
+		F7767F681E6E517F004062E6 /* SettingCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCheckCell.swift; sourceTree = "<group>"; };
+		F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +103,11 @@
 			children = (
 				2C4134B51E666D710068903E /* Utils */,
 				2CC64E051E65621C00C6D9F7 /* Storeage */,
+				F7767F631E6E511D004062E6 /* Settings */,
 				2CC64E041E6561EA00C6D9F7 /* WebKyu.entitlements */,
 				2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */,
 				2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */,
 				2CC64DF01E65421500C6D9F7 /* ViewController.swift */,
-				2CC64E001E65609200C6D9F7 /* SettingViewController.swift */,
 				2C4134BC1E668D0A0068903E /* CachedViewController.swift */,
 				2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */,
 				2CC64DF21E65421500C6D9F7 /* Main.storyboard */,
@@ -137,6 +145,18 @@
 				7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7767F631E6E511D004062E6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2CC64E001E65609200C6D9F7 /* SettingViewController.swift */,
+				F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */,
+				F7767F681E6E517F004062E6 /* SettingCheckCell.swift */,
+				F7767F641E6E5164004062E6 /* SettingLimitCell.swift */,
+				F7767F661E6E5174004062E6 /* SettingToggleCell.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +309,15 @@
 				2C4134BB1E6673980068903E /* Image.swift in Sources */,
 				F7767F5F1E6E486E004062E6 /* CountButton.swift in Sources */,
 				2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */,
+				F7767F651E6E5164004062E6 /* SettingLimitCell.swift in Sources */,
 				2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */,
+				F7767F691E6E517F004062E6 /* SettingCheckCell.swift in Sources */,
 				2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */,
 				2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */,
 				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,
+				F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */,
 				F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */,
+				F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */,
 				2C4134BF1E668D9D0068903E /* ImageCollcetionViewCell.swift in Sources */,
 				2C4134B91E6672F70068903E /* Global.swift in Sources */,
 			);

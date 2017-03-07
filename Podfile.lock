@@ -1,6 +1,7 @@
 PODS:
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
+  - EasyAnimation (1.1.1)
   - Fabric (1.6.11)
   - Firebase/Core (3.14.0):
     - FirebaseAnalytics (= 3.7.0)
@@ -20,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - Crashlytics
+  - EasyAnimation
   - Fabric
   - Firebase/Core
   - Kingfisher
@@ -27,6 +29,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  EasyAnimation: e67601df3eb57e86c570948a250ce162a5665b8a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
@@ -36,6 +39,6 @@ SPEC CHECKSUMS:
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: ea71aab28445ee1622eccefd290df3ece97d11cd
+PODFILE CHECKSUM: df2f6d4c76329476c3236ede70c7aef8d2336351
 
 COCOAPODS: 1.2.0

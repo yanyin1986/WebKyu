@@ -10,7 +10,7 @@ import Foundation
 import Kingfisher
 
 
-let appGroupId = "group.shiba"
+let appGroupId = "group.mmd.webpuppy"
 
 protocol Storeage: class {
     func imageCache() -> ImageCache

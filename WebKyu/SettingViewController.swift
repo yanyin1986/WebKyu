@@ -24,6 +24,9 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func hideSettings(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SettingViewController: UITableViewDataSource {

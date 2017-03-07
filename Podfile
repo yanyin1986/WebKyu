@@ -7,4 +7,5 @@ target 'WebKyu' do
 	pod 'Firebase/Core'
 	pod 'Fabric'
 	pod 'Crashlytics'
+	pod 'EasyAnimation'
 end

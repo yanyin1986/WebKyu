@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import SnapKit
+import EasyAnimation
 
 class ViewController: UIViewController {
     
@@ -20,14 +21,27 @@ class ViewController: UIViewController {
     weak var _webContainer: UIView!
     
     @IBOutlet
+    weak var _backButton: UIButton!
+    
+    @IBOutlet
+    weak var _forwardButton: UIButton!
+    
+    @IBOutlet
+    weak var _stopButton: UIButton!
+    
+    @IBOutlet
+    weak var _attectionButton: UIButton!
+    
+    @IBOutlet
+    weak var _filterButton: UIButton!
+    
+    @IBOutlet
     weak var _countButton: UIButton!
     
     private var _timer: Timer?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,16 +91,20 @@ class ViewController: UIViewController {
             _imageCount = images.count
             
             _countButton.setTitle("\(_imageCount)", for: .normal)
-            UIView.animate(withDuration: 0.15, animations: {
+            UIView.animateAndChain(withDuration: 0.15, delay: 0, options: [], animations: {
                 self._countButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            }, completion: { (_) in
-                UIView.animate(withDuration: 0.15, animations: { 
-                    self._countButton.transform = CGAffineTransform.identity
-                }, completion: nil)
+            }, completion: nil).animate(withDuration: 0.15, animations: {
+                self._countButton.transform = CGAffineTransform.identity
             })
         }
-        
     }
+    
+    @IBAction func toggleAttection(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        _filterButton.isEnabled = sender.isSelected
+        _countButton.isEnabled = sender.isSelected
+    }
+    
 }
 
 extension ViewController: UITextFieldDelegate {

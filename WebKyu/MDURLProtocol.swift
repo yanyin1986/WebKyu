@@ -20,6 +20,8 @@ enum TrackRequirable {
 
 final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
     
+    static var tracking: Bool = false
+    
     private var _dataTask: URLSessionDataTask?
     private var _data: Data?
     private var _shouldCache: Bool = false
@@ -137,7 +139,7 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
         if let err = error as? URLError, err.code != .cancelled {
             self.client?.urlProtocol(self, didFailWithError: err)
         } else {
-            if _trackRequirable == .yes && _data != nil {
+            if _trackRequirable == .yes && _data != nil && MDURLProtocol.tracking {
                 let imageCache = MDStoreage.shared.imageCache()
                 imageCache.store(DefaultCacheSerializer.default.image(with: _data!, options: nil)!,
                                  original: _data,

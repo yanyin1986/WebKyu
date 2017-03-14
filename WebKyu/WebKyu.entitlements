@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.mmd.webpuppy</string>
+		<string>group.mmd.PuppyBrowser</string>
 	</array>
 </dict>
 </plist>

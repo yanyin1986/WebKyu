@@ -198,7 +198,7 @@
 				TargetAttributes = {
 					2CC64DEA1E65421500C6D9F7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BA96H9FD2B;
+						DevelopmentTeam = 3Z3K367TN7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -448,11 +448,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
-				DEVELOPMENT_TEAM = BA96H9FD2B;
+				DEVELOPMENT_TEAM = 3Z3K367TN7;
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mmd.WebPuppy;
+				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -464,11 +464,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
-				DEVELOPMENT_TEAM = BA96H9FD2B;
+				DEVELOPMENT_TEAM = 3Z3K367TN7;
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mmd.WebPuppy;
+				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

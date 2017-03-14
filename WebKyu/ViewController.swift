@@ -103,6 +103,7 @@ class ViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         _filterButton.isEnabled = sender.isSelected
         _countButton.isEnabled = sender.isSelected
+        MDURLProtocol.tracking = sender.isSelected
     }
 }
 

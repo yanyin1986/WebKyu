@@ -18,6 +18,12 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - Kingfisher (3.5.0)
   - SnapKit (3.2.0)
+  - SQLite.swift (0.11.2):
+    - SQLite.swift/standard (= 0.11.2)
+  - SQLite.swift/standard (0.11.2)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
   - Crashlytics
@@ -26,6 +32,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Kingfisher
   - SnapKit (~> 3.2.0)
+  - SQLite.swift
+  - YYImage
 
 SPEC CHECKSUMS:
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
@@ -38,7 +46,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: df2f6d4c76329476c3236ede70c7aef8d2336351
+PODFILE CHECKSUM: 900e30e06bea62e13dea14b4dc74c3cba07ece2c
 
 COCOAPODS: 1.2.0

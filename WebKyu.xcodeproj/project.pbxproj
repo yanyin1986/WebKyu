@@ -12,6 +12,7 @@
 		2C4134BB1E6673980068903E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BA1E6673980068903E /* Image.swift */; };
 		2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BC1E668D0A0068903E /* CachedViewController.swift */; };
 		2C4134BF1E668D9D0068903E /* ImageCollcetionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */; };
+		2C9A43F31E70678F008555CB /* FilterSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9A43F21E70678F008555CB /* FilterSettings.swift */; };
 		2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */; };
 		2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DF01E65421500C6D9F7 /* ViewController.swift */; };
 		2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC64DF21E65421500C6D9F7 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		2C4134BA1E6673980068903E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2C4134BC1E668D0A0068903E /* CachedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedViewController.swift; sourceTree = "<group>"; };
 		2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollcetionViewCell.swift; sourceTree = "<group>"; };
+		2C9A43F21E70678F008555CB /* FilterSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettings.swift; sourceTree = "<group>"; };
 		2CC64DEB1E65421500C6D9F7 /* WebKyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebKyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC64DF01E65421500C6D9F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,11 +152,12 @@
 		F7767F631E6E511D004062E6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				2CC64E001E65609200C6D9F7 /* SettingViewController.swift */,
-				F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */,
+				2C9A43F21E70678F008555CB /* FilterSettings.swift */,
 				F7767F681E6E517F004062E6 /* SettingCheckCell.swift */,
+				F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */,
 				F7767F641E6E5164004062E6 /* SettingLimitCell.swift */,
 				F7767F661E6E5174004062E6 /* SettingToggleCell.swift */,
+				2CC64E001E65609200C6D9F7 /* SettingViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				F7767F651E6E5164004062E6 /* SettingLimitCell.swift in Sources */,
 				2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */,
 				F7767F691E6E517F004062E6 /* SettingCheckCell.swift in Sources */,
+				2C9A43F31E70678F008555CB /* FilterSettings.swift in Sources */,
 				2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */,
 				2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */,
 				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,

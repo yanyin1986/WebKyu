@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol SettingFilterDelegate: class {
+    func filterSettingDidChanged()
+}
+
 class SettingFilterViewController: UITableViewController {
     
+    private let originalSetting = FilterSettings()
+    private var changedSetting = FilterSettings()
+    
+    weak var delegate: SettingFilterDelegate?
     var isAllImageTypeEnable: Bool = true
 
     override func viewDidLoad() {

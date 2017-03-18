@@ -8,13 +8,17 @@
 
 import Foundation
 
-enum MimeType {
-    case jpeg
-    case png
-    case gif
-    case tiff
-    case webp
-    case unknow
+struct MimeType: OptionSet {
+    let rawValue: Int
+    
+    static let jpeg = MimeType(rawValue: 1 << 0)
+    static let png  = MimeType(rawValue: 1 << 1)
+    static let gif  = MimeType(rawValue: 1 << 2)
+    static let tiff = MimeType(rawValue: 1 << 3)
+    static let webp = MimeType(rawValue: 1 << 4)
+    static let unknow = MimeType(rawValue: 1 << 32)
+    
+    static let all: MimeType = [.jpeg, .png, .gif, .tiff, .webp]
 }
 
 extension Data {

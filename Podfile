@@ -8,4 +8,6 @@ target 'WebKyu' do
 	pod 'Fabric'
 	pod 'Crashlytics'
 	pod 'EasyAnimation'
+    pod 'SQLite.swift'
+    pod 'YYImage'
 end

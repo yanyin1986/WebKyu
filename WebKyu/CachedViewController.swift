@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import YYImage
 
-class CachedViewController: UIViewController, UICollectionViewDataSource {
+class CachedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet
     weak var collectionView: UICollectionView!
@@ -35,12 +36,24 @@ class CachedViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollcetionViewCell
         let img = images[indexPath.row]
-        MDStoreage.shared.imageCache().retrieveImage(forKey: img.url.absoluteString, options: nil, completionHandler: { (image, _) in
-            cell.imageView.image = image
-        })
+        let path = MDStoreage.shared.imageCache().cachePath(forKey: img.url.absoluteString)
+        let image = YYImage(contentsOfFile: path)
+        cell.imageView.image = image
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = floor((collectionView.frame.width - 10) / 3.0)
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 }
 
 extension CachedViewController: CHTCollectionViewDelegateWaterfallLayout {

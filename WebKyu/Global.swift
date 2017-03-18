@@ -47,6 +47,8 @@ final class Global {
         
     }
     
+    public var videos: [URL] = []
+    
     func contains(image: Image) -> Bool {
         return _imageSet.contains(image)
     }

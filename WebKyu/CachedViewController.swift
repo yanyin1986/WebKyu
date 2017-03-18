@@ -18,6 +18,10 @@ class CachedViewController: UIViewController, UICollectionViewDataSource {
 
         // Do any additional setup after loading the view.
         images = Global.share.images()
+        let layout = collectionView.collectionViewLayout as! CHTCollectionViewWaterfallLayout
+        layout.columnCount = 2
+        layout.minimumColumnSpacing = 0
+        layout.minimumInteritemSpacing = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,4 +41,12 @@ class CachedViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
+}
+
+extension CachedViewController: CHTCollectionViewDelegateWaterfallLayout {
+    func collectionView(_ collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let imageSize = images[indexPath.row].size
+        return CGSize(width: 160, height: (160/imageSize.width) * imageSize.height);
+    }
 }

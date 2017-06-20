@@ -91,6 +91,14 @@ final class Global {
         
         return images
     }
-    
-    
+
+//    func mwPhoto(withFilterOptions options: FilterOption? = nil) -> [MWPhoto] {
+//        var photos = [MWPhoto]()
+//        let images = self.images(withFilterOptions: options)
+//        for image in  images {
+//            photos.append(MWPhoto(url: image.url))
+//        }
+//
+//        return photos
+//    }
 }

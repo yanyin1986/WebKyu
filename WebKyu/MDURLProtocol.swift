@@ -112,7 +112,6 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
                         if type == "video" && response.url != nil {
                             Global.share.videos.append(response.url!)
                         }
-                        
                         break
                     }
                 }

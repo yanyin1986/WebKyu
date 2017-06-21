@@ -8,7 +8,6 @@
 
 import UIKit
 import YYImage
-import JXPhotoBrowser
 import ImageIO
 import SnapKit
 
@@ -140,8 +139,11 @@ extension CachedViewController: PhotoBrowserDelegate {
     }
 
     /// 实现本方法以返回高质量图片。可选
-    func photoBrowser(_ photoBrowser: PhotoBrowser, highQualityImageForIndex index: Int) -> UIImage? {
-        return UIImage(contentsOfFile: images[index].url.path)
+    func photoBrowser(_ photoBrowser: PhotoBrowser, highQualityImageForIndex index: Int) -> YYImage? {
+        let path = MDStoreage.shared.imageCache().cachePath(forKey: images[index].url.absoluteString)
+        let image = YYImage(contentsOfFile: path)
+        return image
+//        return UIImage(contentsOfFile: .path)
     }
 
     /// 长按时回调。可选

@@ -29,6 +29,14 @@
 		F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F661E6E5174004062E6 /* SettingToggleCell.swift */; };
 		F7767F691E6E517F004062E6 /* SettingCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F681E6E517F004062E6 /* SettingCheckCell.swift */; };
 		F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */; };
+		F7C856961EF9EB0700FFBDF8 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */; };
+		F7C856971EF9EB0700FFBDF8 /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */; };
+		F7C856981EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */; };
+		F7C856991EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856911EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift */; };
+		F7C8569A1EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856921EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift */; };
+		F7C8569B1EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856931EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift */; };
+		F7C8569C1EF9EB0700FFBDF8 /* ScaleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856941EF9EB0700FFBDF8 /* ScaleAnimator.swift */; };
+		F7C8569D1EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856951EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +67,14 @@
 		F7767F661E6E5174004062E6 /* SettingToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingToggleCell.swift; sourceTree = "<group>"; };
 		F7767F681E6E517F004062E6 /* SettingCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCheckCell.swift; sourceTree = "<group>"; };
 		F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingFilterViewController.swift; sourceTree = "<group>"; };
-		F7F6285B1E7CB75100FE087E /* WebKyu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebKyu-Bridging-Header.h"; sourceTree = "<group>"; };
+		F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
+		F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
+		F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserDefaultPageControlDelegate.swift; sourceTree = "<group>"; };
+		F7C856911EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserLayout.swift; sourceTree = "<group>"; };
+		F7C856921EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserNumberPageControlDelegate.swift; sourceTree = "<group>"; };
+		F7C856931EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserProgressView.swift; sourceTree = "<group>"; };
+		F7C856941EF9EB0700FFBDF8 /* ScaleAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimator.swift; sourceTree = "<group>"; };
+		F7C856951EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimatorCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +92,14 @@
 		2C4134B51E666D710068903E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */,
+				F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */,
+				F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */,
+				F7C856911EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift */,
+				F7C856921EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift */,
+				F7C856931EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift */,
+				F7C856941EF9EB0700FFBDF8 /* ScaleAnimator.swift */,
+				F7C856951EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift */,
 				2C4134B61E666DCC0068903E /* Data+MIMEType.swift */,
 				F7767F601E6E49E1004062E6 /* CGGeometry+.swift */,
 			);
@@ -121,7 +144,6 @@
 				2C4134B81E6672F70068903E /* Global.swift */,
 				2C4134BA1E6673980068903E /* Image.swift */,
 				F7767F5E1E6E486E004062E6 /* CountButton.swift */,
-				F7F6285B1E7CB75100FE087E /* WebKyu-Bridging-Header.h */,
 			);
 			path = WebKyu;
 			sourceTree = "<group>";
@@ -312,21 +334,29 @@
 			files = (
 				2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */,
 				2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */,
+				F7C856971EF9EB0700FFBDF8 /* PhotoBrowserCell.swift in Sources */,
 				2C4134BB1E6673980068903E /* Image.swift in Sources */,
+				F7C8569A1EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift in Sources */,
+				F7C8569B1EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift in Sources */,
 				F7767F5F1E6E486E004062E6 /* CountButton.swift in Sources */,
 				2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */,
+				F7C856961EF9EB0700FFBDF8 /* PhotoBrowser.swift in Sources */,
 				F7767F651E6E5164004062E6 /* SettingLimitCell.swift in Sources */,
 				2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */,
 				F7767F691E6E517F004062E6 /* SettingCheckCell.swift in Sources */,
 				2C9A43F31E70678F008555CB /* FilterSettings.swift in Sources */,
 				2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */,
+				F7C856991EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift in Sources */,
 				2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */,
 				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,
+				F7C8569C1EF9EB0700FFBDF8 /* ScaleAnimator.swift in Sources */,
+				F7C8569D1EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift in Sources */,
 				F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */,
 				F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */,
 				F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */,
 				2C4134BF1E668D9D0068903E /* ImageCollcetionViewCell.swift in Sources */,
 				2C4134B91E6672F70068903E /* Global.swift in Sources */,
+				F7C856981EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +488,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mmd.WebPuppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/WebKyu-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -477,7 +508,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mmd.WebPuppy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/WebKyu-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

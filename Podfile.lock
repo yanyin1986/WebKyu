@@ -16,8 +16,6 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - JXPhotoBrowser (0.2.6):
-    - Kingfisher
   - Kingfisher (3.5.0)
   - SnapKit (3.2.0)
   - SQLite.swift (0.11.2):
@@ -32,7 +30,6 @@ DEPENDENCIES:
   - EasyAnimation
   - Fabric
   - Firebase/Core
-  - JXPhotoBrowser
   - Kingfisher
   - SnapKit (~> 3.2.0)
   - SQLite.swift
@@ -47,12 +44,11 @@ SPEC CHECKSUMS:
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  JXPhotoBrowser: 9a2027a37459b05c69096c54d30c9f4badfb4bfd
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: e4fe9f4176bd42ccb4d05624e369b7ee2efd1c3b
+PODFILE CHECKSUM: 233be1e35c7d31a66b5d556324bc230734c18b5b
 
 COCOAPODS: 1.2.1

@@ -9,25 +9,43 @@
 import UIKit
 import WebKit
 import SnapKit
+import EasyAnimation
+import ImageIO
 
 class ViewController: UIViewController {
     
     var _imageCount: Int = 0
    
     var _webView: UIWebView?
-    
+
     @IBOutlet
     weak var _webContainer: UIView!
+    
+    @IBOutlet
+    weak var _backButton: UIButton!
+    
+    @IBOutlet
+    weak var _forwardButton: UIButton!
+    
+    @IBOutlet
+    weak var _stopButton: UIButton!
+    
+    @IBOutlet
+    weak var _attectionButton: UIButton!
+    
+    @IBOutlet
+    weak var _filterButton: UIButton!
     
     @IBOutlet
     weak var _countButton: UIButton!
     
     private var _timer: Timer?
-    
-    
+
+//    fileprivate var images: [MWPhoto] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,9 +83,7 @@ class ViewController: UIViewController {
             
             //
             URLProtocol.registerClass(MDURLProtocol.self)
-            _timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (_) in
-                self.checkImages()
-            })
+            _timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkImages), userInfo: nil, repeats: true)
         }
         _webView!.loadRequest(URLRequest(url: url))
     }
@@ -79,15 +95,42 @@ class ViewController: UIViewController {
             _imageCount = images.count
             
             _countButton.setTitle("\(_imageCount)", for: .normal)
-            UIView.animate(withDuration: 0.15, animations: {
+            UIView.animateAndChain(withDuration: 0.15, delay: 0, options: [], animations: {
                 self._countButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            }, completion: { (_) in
-                UIView.animate(withDuration: 0.15, animations: { 
-                    self._countButton.transform = CGAffineTransform.identity
-                }, completion: nil)
+            }, completion: nil).animate(withDuration: 0.15, animations: {
+                self._countButton.transform = CGAffineTransform.identity
             })
         }
-        
+    }
+
+//    @IBAction func showPhotoBrowser(_ sender: Any) {
+////        self.images.removeAll()
+////        self.images.append(contentsOf: Global.share.mwPhoto())
+//
+//        let browser = PhotoBrowser(showByViewController: self, delegate: self)
+//        browser.show(index: 0)
+//        /*
+//        guard let browser = MWPhotoBrowser(delegate: self) else {
+//            return
+//        }
+//
+//        browser.displayActionButton = true
+//        browser.displayNavArrows = true
+//        browser.displaySelectionButtons = false // Whether selection buttons are shown on each image (defaults to NO)
+//        browser.zoomPhotosToFill = true
+//        browser.alwaysShowControls = true
+//        browser.enableGrid = true
+//        browser.startOnGrid = true
+//
+//        self.navigationController?.pushViewController(browser, animated: true)
+// */
+//        //(browser, animated: true, completion: nil)
+//    }
+
+    @IBAction func toggleAttection(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        _filterButton.isEnabled = sender.isSelected
+        _countButton.isEnabled = sender.isSelected
     }
 }
 
@@ -106,4 +149,62 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+//
+//extension ViewController: PhotoBrowserDelegate {
+//    func numberOfPhotos(in photoBrowser: PhotoBrowser) -> Int {
+//        return Global.share.images().count
+//    }
+//
+//    /// 实现本方法以返回默认图片，缩略图或占位图
+//    func photoBrowser(_ photoBrowser: PhotoBrowser, thumbnailImageForIndex index: Int) -> UIImage? {
+//        let image = Global.share.images()[index]
+//        guard let src = CGImageSourceCreateWithURL(image.url as CFURL, nil) else {
+//            return nil
+//        }
+//        let scale = UIScreen.main.scale
+//        let w = (UIScreen.main.bounds.width / 3) * scale
+//        let d : [NSObject:AnyObject] = [
+//            kCGImageSourceShouldAllowFloat : true as AnyObject,
+//            kCGImageSourceCreateThumbnailWithTransform : true as AnyObject,
+//            kCGImageSourceCreateThumbnailFromImageAlways : true as AnyObject,
+//            kCGImageSourceThumbnailMaxPixelSize : w as AnyObject
+//        ]
+//        let imref = CGImageSourceCreateThumbnailAtIndex(src, 0, d as CFDictionary)
+//        return UIImage(cgImage: imref!, scale: scale, orientation: .up)
+//    }
+//
+//    /// 实现本方法以返回默认图所在view，在转场动画完成后将会修改这个view的hidden属性
+//    /// 比如你可返回ImageView，或整个Cell
+//    func photoBrowser(_ photoBrowser: PhotoBrowser, thumbnailViewForIndex index: Int) -> UIView? {
+//        return
+//    }
+//
+//    /// 实现本方法以返回高质量图片。可选
+//    func photoBrowser(_ photoBrowser: PhotoBrowser, highQualityImageForIndex index: Int) -> UIImage? {
+//        return UIImage(contentsOfFile: Global.share.images()[index].url.path)
+//    }
+//
+//    /// 长按时回调。可选
+//    func photoBrowser(_ photoBrowser: PhotoBrowser, didLongPressForIndex index: Int, image: UIImage) {
+//
+//    }
+//}
+
+/*
+extension ViewController: MWPhotoBrowserDelegate {
+
+    func numberOfPhotos(in photoBrowser: MWPhotoBrowser!) -> UInt {
+        return UInt(self.images.count)
+    }
+
+    func photoBrowser(_ photoBrowser: MWPhotoBrowser!, photoAt index: UInt) -> MWPhotoProtocol! {
+        return self.images[Int(index)]
+    }
+
+    func photoBrowser(_ photoBrowser: MWPhotoBrowser!, thumbPhotoAt index: UInt) -> MWPhotoProtocol! {
+        return self.images[Int(index)]
+    }
+
+}
+ */
 

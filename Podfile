@@ -1,7 +1,14 @@
 platform :ios, '9.0'
-use_frameworks!
 
 target 'WebKyu' do
+    use_frameworks!
     pod 'SnapKit', '~> 3.2.0'
     pod 'Kingfisher'
+	pod 'Firebase/Core'
+	pod 'Fabric'
+	pod 'Crashlytics'
+	pod 'EasyAnimation'
+    pod 'SQLite.swift'
+    pod 'YYImage'
+#    pod 'JXPhotoBrowser'
 end

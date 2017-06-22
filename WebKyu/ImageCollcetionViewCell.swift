@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import YYImage
 
 class ImageCollcetionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet
+    weak var imageView: YYAnimatedImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageView.runloopMode = RunLoopMode.defaultRunLoopMode.rawValue
+    }
 }

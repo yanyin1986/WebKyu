@@ -27,6 +27,7 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
     private var _shouldCache: Bool = false
     private var _mimeType: MimeType = MimeType.unknow
     private var _trackRequirable = TrackRequirable.checkLater
+    private var _cookie = HTTPCookieStorage.shared
     private var needTrackMimeType = [
         "image",
         "video",
@@ -48,19 +49,28 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
         }
         
         if (scheme == "http" || scheme == "https")
+            && url.pathExtension != ""
             && !url.path.hasSuffix("css") && !url.path.hasSuffix("js") && !url.path.hasSuffix("woff") {
+            print("\(url), \(url.pathExtension)")
             return true
         }
         return false
     }
+    
     
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
     
     override func startLoading() {
+        print("start Loading: \(self.request)")
         if let request = self.request as? NSMutableURLRequest {
             URLProtocol.setProperty(true, forKey: MDURLProtocolKey, in: request)
+        }
+        
+        if let url = request.url?.pathExtension,
+            url == "mp4" {
+            print(request)
         }
         
         let imageCache = MDStoreage.shared.imageCache()
@@ -93,16 +103,17 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
                     dataTask: URLSessionDataTask,
                     didReceive response: URLResponse,
                     completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-        self.client?.urlProtocol(self,
-                                 didReceive: response,
-                                 cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
         if let mimeType = response.mimeType {
             _mimeType = mimeType.mimeType
             
             if _trackRequirable == .checkLater {
                 for type in needTrackMimeType {
-                    if mimeType == type {
+                    if mimeType.hasPrefix(type) {
                         _trackRequirable = .yes
+                        
+                        if type == "video" && response.url != nil {
+                            Global.share.videos.append(response.url!)
+                        }
                         break
                     }
                 }
@@ -110,14 +121,16 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
             
             if _trackRequirable == .checkLater {
                 for type in unTrackMimeType {
-                    if mimeType == type {
+                    if mimeType.hasPrefix(type) {
                         _trackRequirable = .no
                         break
                     }
                 }
             }
-            
         }
+        self.client?.urlProtocol(self,
+                                 didReceive: response,
+                                 cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
         completionHandler(URLSession.ResponseDisposition.allow)
     }
     

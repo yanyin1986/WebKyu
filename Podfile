@@ -10,4 +10,5 @@ target 'WebKyu' do
 	pod 'EasyAnimation'
     pod 'SQLite.swift'
     pod 'YYImage'
+#    pod 'JXPhotoBrowser'
 end

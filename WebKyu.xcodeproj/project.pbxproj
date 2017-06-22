@@ -12,6 +12,19 @@
 		2C4134BB1E6673980068903E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BA1E6673980068903E /* Image.swift */; };
 		2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BC1E668D0A0068903E /* CachedViewController.swift */; };
 		2C4134BF1E668D9D0068903E /* ImageCollcetionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */; };
+		2C47C4EB1EFB51C9002CD06A /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4E21EFB51C9002CD06A /* HTMLDocument.m */; };
+		2C47C4EC1EFB51C9002CD06A /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4E51EFB51C9002CD06A /* HTMLElement.m */; };
+		2C47C4ED1EFB51C9002CD06A /* XMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4E71EFB51C9002CD06A /* XMLDocument.m */; };
+		2C47C4EE1EFB51C9002CD06A /* XMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4EA1EFB51C9002CD06A /* XMLElement.m */; };
+		2C47C4F01EFB5443002CD06A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C47C4EF1EFB5443002CD06A /* libxml2.tbd */; };
+		2C47C4F51EFB5630002CD06A /* CheckURLExistsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4F11EFB5630002CD06A /* CheckURLExistsOperation.swift */; };
+		2C47C4F61EFB5630002CD06A /* DetectedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4F21EFB5630002CD06A /* DetectedIcon.swift */; };
+		2C47C4F71EFB5630002CD06A /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4F31EFB5630002CD06A /* DownloadImageOperation.swift */; };
+		2C47C4F81EFB5630002CD06A /* DownloadTextOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4F41EFB5630002CD06A /* DownloadTextOperation.swift */; };
+		2C47C4FD1EFB5646002CD06A /* FavIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4F91EFB5646002CD06A /* FavIcon.swift */; };
+		2C47C4FE1EFB5646002CD06A /* IconExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4FA1EFB5646002CD06A /* IconExtraction.swift */; };
+		2C47C4FF1EFB5646002CD06A /* URLRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4FB1EFB5646002CD06A /* URLRequestOperation.swift */; };
+		2C47C5001EFB5646002CD06A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47C4FC1EFB5646002CD06A /* Utils.swift */; };
 		2C9A43F31E70678F008555CB /* FilterSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9A43F21E70678F008555CB /* FilterSettings.swift */; };
 		2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */; };
 		2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64DF01E65421500C6D9F7 /* ViewController.swift */; };
@@ -45,6 +58,26 @@
 		2C4134BA1E6673980068903E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2C4134BC1E668D0A0068903E /* CachedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedViewController.swift; sourceTree = "<group>"; };
 		2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollcetionViewCell.swift; sourceTree = "<group>"; };
+		2C47C4E01EFB51C8002CD06A /* WebKyu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebKyu-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C47C4E11EFB51C9002CD06A /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
+		2C47C4E21EFB51C9002CD06A /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
+		2C47C4E31EFB51C9002CD06A /* HTMLElement_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement_Private.h; sourceTree = "<group>"; };
+		2C47C4E41EFB51C9002CD06A /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
+		2C47C4E51EFB51C9002CD06A /* HTMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElement.m; sourceTree = "<group>"; };
+		2C47C4E61EFB51C9002CD06A /* XMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDocument.h; sourceTree = "<group>"; };
+		2C47C4E71EFB51C9002CD06A /* XMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDocument.m; sourceTree = "<group>"; };
+		2C47C4E81EFB51C9002CD06A /* XMLElement_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement_Private.h; sourceTree = "<group>"; };
+		2C47C4E91EFB51C9002CD06A /* XMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLElement.h; sourceTree = "<group>"; };
+		2C47C4EA1EFB51C9002CD06A /* XMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLElement.m; sourceTree = "<group>"; };
+		2C47C4EF1EFB5443002CD06A /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		2C47C4F11EFB5630002CD06A /* CheckURLExistsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckURLExistsOperation.swift; sourceTree = "<group>"; };
+		2C47C4F21EFB5630002CD06A /* DetectedIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedIcon.swift; sourceTree = "<group>"; };
+		2C47C4F31EFB5630002CD06A /* DownloadImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
+		2C47C4F41EFB5630002CD06A /* DownloadTextOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTextOperation.swift; sourceTree = "<group>"; };
+		2C47C4F91EFB5646002CD06A /* FavIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavIcon.swift; sourceTree = "<group>"; };
+		2C47C4FA1EFB5646002CD06A /* IconExtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconExtraction.swift; sourceTree = "<group>"; };
+		2C47C4FB1EFB5646002CD06A /* URLRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestOperation.swift; sourceTree = "<group>"; };
+		2C47C4FC1EFB5646002CD06A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2C9A43F21E70678F008555CB /* FilterSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSettings.swift; sourceTree = "<group>"; };
 		2CC64DEB1E65421500C6D9F7 /* WebKyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebKyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C47C4F01EFB5443002CD06A /* libxml2.tbd in Frameworks */,
 				3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +140,40 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2C47C4DE1EFB515F002CD06A /* FavIcon */ = {
+			isa = PBXGroup;
+			children = (
+				2C47C4DF1EFB5184002CD06A /* libXML2 */,
+				2C47C4F11EFB5630002CD06A /* CheckURLExistsOperation.swift */,
+				2C47C4F21EFB5630002CD06A /* DetectedIcon.swift */,
+				2C47C4F31EFB5630002CD06A /* DownloadImageOperation.swift */,
+				2C47C4F41EFB5630002CD06A /* DownloadTextOperation.swift */,
+				2C47C4F91EFB5646002CD06A /* FavIcon.swift */,
+				2C47C4FA1EFB5646002CD06A /* IconExtraction.swift */,
+				2C47C4FB1EFB5646002CD06A /* URLRequestOperation.swift */,
+				2C47C4FC1EFB5646002CD06A /* Utils.swift */,
+			);
+			path = FavIcon;
+			sourceTree = "<group>";
+		};
+		2C47C4DF1EFB5184002CD06A /* libXML2 */ = {
+			isa = PBXGroup;
+			children = (
+				2C47C4E11EFB51C9002CD06A /* HTMLDocument.h */,
+				2C47C4E21EFB51C9002CD06A /* HTMLDocument.m */,
+				2C47C4E31EFB51C9002CD06A /* HTMLElement_Private.h */,
+				2C47C4E41EFB51C9002CD06A /* HTMLElement.h */,
+				2C47C4E51EFB51C9002CD06A /* HTMLElement.m */,
+				2C47C4E61EFB51C9002CD06A /* XMLDocument.h */,
+				2C47C4E71EFB51C9002CD06A /* XMLDocument.m */,
+				2C47C4E81EFB51C9002CD06A /* XMLElement_Private.h */,
+				2C47C4E91EFB51C9002CD06A /* XMLElement.h */,
+				2C47C4EA1EFB51C9002CD06A /* XMLElement.m */,
+				2C47C4E01EFB51C8002CD06A /* WebKyu-Bridging-Header.h */,
+			);
+			path = libXML2;
+			sourceTree = "<group>";
+		};
 		2CC64DE21E65421500C6D9F7 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +195,7 @@
 		2CC64DED1E65421500C6D9F7 /* WebKyu */ = {
 			isa = PBXGroup;
 			children = (
+				2C47C4DE1EFB515F002CD06A /* FavIcon */,
 				2C4134B51E666D710068903E /* Utils */,
 				2CC64E051E65621C00C6D9F7 /* Storeage */,
 				F7767F631E6E511D004062E6 /* Settings */,
@@ -159,6 +228,7 @@
 		4F2155BF0E05F2F1EDEAFD57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C47C4EF1EFB5443002CD06A /* libxml2.tbd */,
 				AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */,
 			);
 			name = Frameworks;
@@ -223,6 +293,7 @@
 					2CC64DEA1E65421500C6D9F7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3Z3K367TN7;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -332,12 +403,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */,
+				2C47C4FE1EFB5646002CD06A /* IconExtraction.swift in Sources */,
+				2C47C4F61EFB5630002CD06A /* DetectedIcon.swift in Sources */,
 				2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */,
+				2C47C4F71EFB5630002CD06A /* DownloadImageOperation.swift in Sources */,
+				2C47C4F51EFB5630002CD06A /* CheckURLExistsOperation.swift in Sources */,
 				F7C856971EF9EB0700FFBDF8 /* PhotoBrowserCell.swift in Sources */,
+				2C47C4F81EFB5630002CD06A /* DownloadTextOperation.swift in Sources */,
 				2C4134BB1E6673980068903E /* Image.swift in Sources */,
 				F7C8569A1EF9EB0700FFBDF8 /* PhotoBrowserNumberPageControlDelegate.swift in Sources */,
 				F7C8569B1EF9EB0700FFBDF8 /* PhotoBrowserProgressView.swift in Sources */,
 				F7767F5F1E6E486E004062E6 /* CountButton.swift in Sources */,
+				2C47C4EB1EFB51C9002CD06A /* HTMLDocument.m in Sources */,
+				2C47C5001EFB5646002CD06A /* Utils.swift in Sources */,
 				2CC64DEF1E65421500C6D9F7 /* AppDelegate.swift in Sources */,
 				F7C856961EF9EB0700FFBDF8 /* PhotoBrowser.swift in Sources */,
 				F7767F651E6E5164004062E6 /* SettingLimitCell.swift in Sources */,
@@ -346,12 +424,17 @@
 				2C9A43F31E70678F008555CB /* FilterSettings.swift in Sources */,
 				2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */,
 				F7C856991EF9EB0700FFBDF8 /* PhotoBrowserLayout.swift in Sources */,
+				2C47C4FF1EFB5646002CD06A /* URLRequestOperation.swift in Sources */,
 				2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */,
 				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,
+				2C47C4EE1EFB51C9002CD06A /* XMLElement.m in Sources */,
 				F7C8569C1EF9EB0700FFBDF8 /* ScaleAnimator.swift in Sources */,
 				F7C8569D1EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift in Sources */,
+				2C47C4ED1EFB51C9002CD06A /* XMLDocument.m in Sources */,
+				2C47C4FD1EFB5646002CD06A /* FavIcon.swift in Sources */,
 				F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */,
 				F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */,
+				2C47C4EC1EFB51C9002CD06A /* HTMLElement.m in Sources */,
 				F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */,
 				2C4134BF1E668D9D0068903E /* ImageCollcetionViewCell.swift in Sources */,
 				2C4134B91E6672F70068903E /* Global.swift in Sources */,
@@ -482,13 +565,26 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/FavIcon/libXML2/WebKyu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -502,13 +598,26 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
 				DEVELOPMENT_TEAM = 3Z3K367TN7;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/FavIcon/libXML2/WebKyu-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

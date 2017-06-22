@@ -17,6 +17,7 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - Kingfisher (3.5.0)
+  - MBProgressHUD (1.0.0)
   - SnapKit (3.2.0)
   - SQLite.swift (0.11.2):
     - SQLite.swift/standard (= 0.11.2)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Fabric
   - Firebase/Core
   - Kingfisher
+  - MBProgressHUD (~> 1.0.0)
   - SnapKit (~> 3.2.0)
   - SQLite.swift
   - YYImage
@@ -45,10 +47,11 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 233be1e35c7d31a66b5d556324bc230734c18b5b
+PODFILE CHECKSUM: 39f77851b94dc65c3129c6ee7859498b7a21cc49
 
 COCOAPODS: 1.2.1

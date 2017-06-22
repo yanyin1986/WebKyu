@@ -16,7 +16,7 @@ struct MimeType: OptionSet {
     static let gif  = MimeType(rawValue: 1 << 2)
     static let tiff = MimeType(rawValue: 1 << 3)
     static let webp = MimeType(rawValue: 1 << 4)
-    static let unknow = MimeType(rawValue: 1 << 32)
+    static let unknow = MimeType(rawValue: 1 << 16)
     
     static let all: MimeType = [.jpeg, .png, .gif, .tiff, .webp]
 }

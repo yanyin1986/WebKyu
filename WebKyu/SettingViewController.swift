@@ -7,8 +7,93 @@
 //
 
 import UIKit
+import MessageUI
+import MBProgressHUD
+
+enum WKSettingType: CustomStringConvertible {
+    /// browser
+    case favoriteBookmark
+
+    /// Help
+    case howToUse
+    case feedback
+    case rate
+
+    /// Information
+    case eula
+    case privacy
+
+    var description: String {
+        switch self {
+        case .favoriteBookmark:
+            return "书签"
+
+        case .howToUse:
+            return "使用帮助"
+        case .feedback:
+            return "反馈意见"
+        case .rate:
+            return "评价"
+
+        case .eula:
+            return "最终用户协议"
+        case .privacy:
+            return "隐私协议"
+        }
+    }
+}
+
+enum WKSOptionAccessoryType: Int {
+    case none
+    case disclosureIndicator
+}
+
+struct WKSSection {
+    let section: String?
+    let options: [WKSOption]
+    let footer: String?
+
+    init(section: String? = nil, options: [WKSOption], footer: String? = nil) {
+        self.section = section
+        self.options = options
+        self.footer = footer
+    }
+}
+
+struct WKSOption {
+    var type: WKSettingType
+    var accessoryType: WKSOptionAccessoryType
+    var tag: Int
+
+    init(type: WKSettingType, accessoryType: WKSOptionAccessoryType = WKSOptionAccessoryType.none, tag: Int = -1) {
+        self.type = type
+        self.accessoryType = accessoryType
+        self.tag = tag
+    }
+}
+
+func appVersion() -> String {
+    let dict = Bundle.main.infoDictionary!
+    return "Ver \(dict["CFBundleShortVersionString"]!) (\(dict["CFBundleVersion"]!))"
+}
 
 class SettingViewController: UIViewController {
+
+    fileprivate let settingSource: [WKSSection] = [
+        WKSSection(section: "Browser",
+                   options: [ WKSOption(type: .favoriteBookmark, accessoryType: .disclosureIndicator)],
+                   footer: nil),
+        WKSSection(section: "Help",
+                   options: [ WKSOption(type: .feedback, accessoryType: .disclosureIndicator),
+                              WKSOption(type: .rate, accessoryType: .disclosureIndicator), ],
+                   footer: appVersion()),
+        /*
+        WKSSection(section: "Info",
+                   options: [ WKSOption(type: .eula, accessoryType: .disclosureIndicator),
+                              WKSOption(type: .privacy, accessoryType: . disclosureIndicator), ],
+                   footer: appVersion())
+        */
+    ]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -29,31 +114,120 @@ class SettingViewController: UIViewController {
 
 extension SettingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return settingSource.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 2
-        } else {// if section == 1 {
-            return 1
-        }
+        return settingSource[section].options.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "image size"
-        } else {
-            return "image type"
-        }
+        return settingSource[section].section
+    }
+
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return settingSource[section].footer
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: "limitCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let option = settingSource[indexPath.section].options[indexPath.row]
+
+        cell.textLabel?.text = option.type.description
+        if option.accessoryType == .disclosureIndicator {
+            cell.accessoryType = .disclosureIndicator
         } else {
-            return tableView.dequeueReusableCell(withIdentifier: "toggleCell", for: indexPath)
+            cell.accessoryType = .none
         }
+        return cell
+    }
+}
+
+extension SettingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let option = settingSource[indexPath.section].options[indexPath.row]
+
+        switch option.type {
+        case .favoriteBookmark:
+            self.showFavoriteBookmarks()
+
+        case .feedback:
+            self.showFeedback()
+
+        case .rate:
+            self.showRate()
+
+        case .eula:
+            self.showEULA()
+
+        case .privacy:
+            self.showPrivacy()
+
+        default:
+            break
+        }
+    }
+
+    func showFavoriteBookmarks() {
+
+    }
+
+    func showFeedback() {
+        guard MFMailComposeViewController.canSendMail() else {
+            let alert = UIAlertController(title: nil, message: NSLocalizedString("Cannot open email", comment: "can't open email client"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        let mail = MFMailComposeViewController()
+        mail.setSubject(NSLocalizedString("Feedback for WEBKYU", comment: "feedback email title"))
+        mail.setToRecipients(["gennyinn@gmail.com"])
+        // TODO: message body with saved function
+        mail.setMessageBody("", isHTML: false)
+        mail.mailComposeDelegate = self
+        self.navigationController?.present(mail, animated: true, completion: {
+
+        })
+    }
+
+    func showRate() {
+        let appStoreUrl = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1181876149"
+        if let url = URL(string: appStoreUrl){
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                // Fallback on earlier versions
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+
+    func showEULA() {
         
+    }
+
+    func showPrivacy() {
+        
+    }
+}
+
+extension SettingViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        //@constant   MFMailComposeResultCancelled   User canceled the composition.
+        //@constant   MFMailComposeResultSaved       User successfully saved the message.
+        //@constant   MFMailComposeResultSent        User successfully sent/queued the message.
+        //@constant   MFMailComposeResultFailed      User's attempt to save or send was unsuccessful.
+        controller.dismiss(animated: true, completion: {
+            if result == MFMailComposeResult.sent {
+                let hudView = MBProgressHUD.showAdded(to: self.view, animated: true)
+                hudView.mode = MBProgressHUDMode.text
+                hudView.label.text = NSLocalizedString("Thanks for your advice", comment: "")
+                hudView.show(animated: true)
+                hudView.hide(animated: true, afterDelay: 3.0)
+            }
+        })
     }
 }

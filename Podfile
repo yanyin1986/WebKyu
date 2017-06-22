@@ -10,5 +10,5 @@ target 'WebKyu' do
 	pod 'EasyAnimation'
     pod 'SQLite.swift'
     pod 'YYImage'
-#    pod 'JXPhotoBrowser'
+    pod 'MBProgressHUD', '~> 1.0.0'
 end

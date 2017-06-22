@@ -260,6 +260,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="z42-LG-9ug" id="Z9P-px-Oqf"/>
+                                    <outlet property="delegate" destination="z42-LG-9ug" id="yRg-w0-3zk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -279,7 +283,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Wvb-bc-duc" id="YqI-oU-d1f"/>
+                        <outlet property="tableView" destination="Wvb-bc-duc" id="Gaz-Nd-kKH"/>
+                        <outlet property="view" destination="tgo-dd-lqK" id="Si2-bG-sMm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyJ-JE-69d" userLabel="First Responder" sceneMemberID="firstResponder"/>

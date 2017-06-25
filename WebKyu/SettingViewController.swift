@@ -171,7 +171,7 @@ extension SettingViewController: UITableViewDelegate {
     }
 
     func showFavoriteBookmarks() {
-
+        self.performSegue(withIdentifier: "showBookmark", sender: nil)
     }
 
     func showFeedback() {

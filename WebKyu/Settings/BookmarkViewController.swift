@@ -8,23 +8,33 @@
 
 import UIKit
 import MBProgressHUD
+import Kingfisher
 
 class Bookmark: NSObject, NSCoding {
     let url: URL
+    let favIconUrl: URL?
 
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(url, forKey: "url")
+        aCoder.encode(favIconUrl, forKey: "favIconUrl")
     }
 
-    public init(url: URL) {
+    public init(url: URL, favIconUrl: URL? = nil) {
         self.url = url
+        self.favIconUrl = favIconUrl
     }
 
     public required init?(coder aDecoder: NSCoder) {
-        if let u = aDecoder.decodeObject(forKey: "url") as? URL {
-            url = u
+        if let url = aDecoder.decodeObject(forKey: "url") as? URL {
+            self.url = url
         } else {
             fatalError("error when decode")
+        }
+
+        if let favIconUrl = aDecoder.decodeObject(forKey: "favIconUrl") as? URL {
+            self.favIconUrl = favIconUrl
+        } else {
+            self.favIconUrl = nil
         }
     }
 
@@ -55,12 +65,16 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         let initial: [Bookmark] = [
-            Bookmark(url: URL(string: "http://instagram.com")!),
-            Bookmark(url: URL(string: "http://pinterest.com")!),
-            Bookmark(url: URL(string: "http://500px.com")!),
-            Bookmark(url: URL(string: "http://flickr.com")!),
-            Bookmark(url: URL(string: "http://image.google.com")!),
-            Bookmark(url: URL(string: "http://image.baidu.com")!),
+            Bookmark(url: URL(string: "http://instagram.com")!,
+                     favIconUrl: URL(string: "https://www.instagram.com/static/images/ico/apple-touch-icon-180x180-precomposed.png/94fd767f257b.png")),
+            Bookmark(url: URL(string: "http://pinterest.com")!,
+                     favIconUrl: URL(string: "https://s.pinimg.com/images/favicon_red_192.png")),
+            Bookmark(url: URL(string: "http://500px.com")!,
+                     favIconUrl: URL(string: "https://assetcdn.500px.org/assets/favicon-7d8942fba5c5649f91a595d0fc749c83.ico")),
+            Bookmark(url: URL(string: "http://flickr.com")!,
+                     favIconUrl: URL(string: "https://s.yimg.com/pw/images/favicon-msapplication-tileimage.png")),
+            Bookmark(url: URL(string: "http://tumblr.com")!,
+                     favIconUrl: URL(string: "https://assets.tumblr.com/images/apple-touch-icon-228x228.png?_v=3cb4fe24e7a5c4cdb91b813509dd8f53")),
         ]
 
         UserDefaults.standard.register(defaults: [
@@ -101,20 +115,21 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
                 return
             }
 
-            let bookmark = Bookmark(url: url)
-
-            guard !self.bookmarks.contains(bookmark) else {
+            guard self.bookmarks.first(where: { $0.url == url }) == nil else {
                 self.show(errorMessage: "Repeat url")
                 return
             }
 
-            let count = self.bookmarks.count
-            self.bookmarks.append(bookmark)
-            self.tableView.beginUpdates()
-            self.tableView.insertRows(at: [IndexPath(row: count, section: 0)],
-                                      with: UITableViewRowAnimation.automatic)
-            self.tableView.endUpdates()
-            self.persistentBookmarks()
+            self.fetchFavIcon(forUrl: url, withCompletion: { (favIconUrl) in
+                let bookmark = Bookmark(url: url, favIconUrl: favIconUrl)
+                let count = self.bookmarks.count
+                self.bookmarks.append(bookmark)
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [IndexPath(row: count, section: 0)],
+                                          with: UITableViewRowAnimation.automatic)
+                self.tableView.endUpdates()
+                self.persistentBookmarks()
+            })
         }))
         self.present(alert, animated: true, completion: nil)
 
@@ -139,31 +154,41 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
         hud.hide(animated: true, afterDelay: 1.5)
     }
 
-    /*
-    private func fetchFavIcon(forUrl url: URL) {
+    private func fetchFavIcon(forUrl url: URL, withCompletion: @escaping (_ favIconUrl: URL?) -> Void) {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud.mode = MBProgressHUDMode.indeterminate
         hud.show(animated: true)
 
         do {
+            try FavIcon.scan(url.absoluteString, completion: { (icons) in
+                guard let icon = FavIcon.chooseIcon(icons) else {
+                    DispatchQueue.main.async {
+                        withCompletion(nil)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    withCompletion(icon.url)
+                }
+                hud.hide(animated: true)
+            })
+            /*
             try FavIcon.downloadPreferred(url) { (result) in
                 switch (result) {
                 case .success(let image):
                     hud.mode = MBProgressHUDMode.customView
-
                     hud.customView = UIImageView(image: image)
-
                     hud.hide(animated: true, afterDelay: 1.5)
                 case .failure(let error):
-                    hud.label.text = "Error: \(error)"
-                    hud.hide(animated: true, afterDelay: 1.5)
                 }
-            }
+            }*/
         } catch {
-            
+            hud.mode = MBProgressHUDMode.text
+            hud.label.numberOfLines = 0
+            hud.label.text = "Error: \(error)"
+            hud.hide(animated: true, afterDelay: 1.5)
         }
     }
- */
     // MARK: - Table view data source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -171,14 +196,21 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmark", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmark", for: indexPath) as! BookmarkTableViewCell
         let bookmark = self.bookmarks[indexPath.row]
-        cell.textLabel?.text = bookmark.url.absoluteString
+
+
+        cell.titleLabel?.text = bookmark.url.absoluteString
+        if let favIconUrl = bookmark.favIconUrl {
+            cell.favIconImageView?.kf.setImage(with: ImageResource(downloadURL: favIconUrl))
+        } else {
+            cell.favIconImageView?.image = nil
+        }
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 60
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -202,6 +234,10 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
         self.persistentBookmarks()
     }
 
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

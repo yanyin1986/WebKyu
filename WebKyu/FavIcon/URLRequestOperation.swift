@@ -87,8 +87,7 @@ class URLRequestOperation: Operation {
     }
 
     func prepareRequest() {
-        print(self.urlRequest.allHTTPHeaderFields)
-        self.urlRequest.addValue("Mozilla/5.0 (iPhone; CPU iPhone OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H143", forHTTPHeaderField: "UserAgent")
+//        self.urlRequest.addValue("Mozilla/5.0 (iPhone; CPU iPhone OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H143", forHTTPHeaderField: "UserAgent")
     }
 
     func processResult(_ data: Data?, response: HTTPURLResponse, completion: @escaping (URLResult) -> Void) {

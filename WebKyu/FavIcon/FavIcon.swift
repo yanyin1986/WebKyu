@@ -214,6 +214,7 @@ public final class FavIcon {
 
             let urlSession = urlSessionProvider()
 
+            print(icon.url)
             let operations = [DownloadImageOperation(url: icon.url, session: urlSession)]
             executeURLOperations(operations) { results in
                 let downloadResults: [IconDownloadResult] = results.map { result in

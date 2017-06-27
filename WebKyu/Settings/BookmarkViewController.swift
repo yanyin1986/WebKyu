@@ -78,6 +78,10 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
     private func persistentBookmarks() {
         DispatchQueue.global(qos: .background).async {
             BookmarkManager.shared.bookmarks = self.bookmarks
+
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .BookmarksDataSourceUpdate, object: nil)
+            }
         }
     }
 

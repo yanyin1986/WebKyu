@@ -13,6 +13,10 @@ import EasyAnimation
 import ImageIO
 import Kingfisher
 
+extension Notification.Name {
+    static let BookmarksDataSourceUpdate = Notification.Name("mmd.PuppyBrowser.bookmarksDataSourceUpdate")
+}
+
 class ViewController: UIViewController {
     
     var _imageCount: Int = 0
@@ -48,15 +52,33 @@ class ViewController: UIViewController {
 
     private var _timer: Timer?
 
+    private var _updateBookmarks: Bool = false
+
 //    fileprivate var images: [MWPhoto] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+
+        NotificationCenter.default.addObserver(self, selector: #selector(bookmarksDataSourceUpdated), name: .BookmarksDataSourceUpdate, object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc
+    func bookmarksDataSourceUpdated() {
+        _updateBookmarks = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        if _updateBookmarks {
+            _updateBookmarks = false
+            self.collectionView?.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -86,7 +86,7 @@ class SettingViewController: UIViewController {
         WKSSection(section: "Help",
                    options: [ WKSOption(type: .feedback, accessoryType: .disclosureIndicator),
                               WKSOption(type: .rate, accessoryType: .disclosureIndicator), ],
-                   footer: appVersion()),
+                   footer: nil),
         WKSSection(section: "Info",
                    options: [ WKSOption(type: .eula, accessoryType: .disclosureIndicator),
                               WKSOption(type: .privacy, accessoryType: . disclosureIndicator), ],

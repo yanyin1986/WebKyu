@@ -11,6 +11,7 @@ import WebKit
 import SnapKit
 import EasyAnimation
 import ImageIO
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     
     @IBOutlet
     weak var _stopButton: UIButton!
-    
+
     @IBOutlet
     weak var _attectionButton: UIButton!
     
@@ -39,6 +40,12 @@ class ViewController: UIViewController {
     @IBOutlet
     weak var _countButton: UIButton!
     
+    @IBOutlet
+    weak var urlTextField: UITextField!
+
+    @IBOutlet
+    weak var collectionView: UICollectionView!
+
     private var _timer: Timer?
 
 //    fileprivate var images: [MWPhoto] = []
@@ -57,6 +64,7 @@ class ViewController: UIViewController {
     }
     
     func loadUrl(url: URL) {
+        self.collectionView.removeFromSuperview()
         if _webView == nil {
             _webView = UIWebView(frame: self.view.bounds)
             _webView!.backgroundColor = UIColor.white
@@ -132,6 +140,32 @@ class ViewController: UIViewController {
         _filterButton.isEnabled = sender.isSelected
         _countButton.isEnabled = sender.isSelected
         MDURLProtocol.tracking = sender.isSelected
+    }
+}
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return BookmarkManager.shared.bookmarks.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookmark", for: indexPath) as! BookmarkCollectionViewCell
+
+        let bookmark = BookmarkManager.shared.bookmarks[indexPath.row]
+        if let url = bookmark.favIconUrl {
+            cell.imageView.kf.setImage(with: ImageResource(downloadURL: url))
+        } else {
+            cell.imageView.image = nil
+        }
+
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let bookmark = BookmarkManager.shared.bookmarks[indexPath.row]
+        self.loadUrl(url: bookmark.url)
+        self.urlTextField.text = bookmark.url.absoluteString
     }
 }
 

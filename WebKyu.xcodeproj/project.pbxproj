@@ -45,6 +45,8 @@
 		F7767F6B1E6E5A17004062E6 /* SettingFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */; };
 		F7A99D461EFE0E4600C34154 /* AddBookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A99D451EFE0E4600C34154 /* AddBookmarkViewController.swift */; };
 		F7BC42B61EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */; };
+		F7BC42B81EFFEF3700EF8D79 /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */; };
+		F7BC42BA1F01553A00EF8D79 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B91F01553A00EF8D79 /* BookmarkCollectionViewCell.swift */; };
 		F7C856961EF9EB0700FFBDF8 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */; };
 		F7C856971EF9EB0700FFBDF8 /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */; };
 		F7C856981EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */; };
@@ -106,6 +108,8 @@
 		F7767F6A1E6E5A17004062E6 /* SettingFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingFilterViewController.swift; sourceTree = "<group>"; };
 		F7A99D451EFE0E4600C34154 /* AddBookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookmarkViewController.swift; sourceTree = "<group>"; };
 		F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
+		F7BC42B91F01553A00EF8D79 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
 		F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
 		F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserDefaultPageControlDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */,
 				2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */,
 				2CC64DF01E65421500C6D9F7 /* ViewController.swift */,
+				F7BC42B91F01553A00EF8D79 /* BookmarkCollectionViewCell.swift */,
 				2C4134BC1E668D0A0068903E /* CachedViewController.swift */,
 				2C4134BE1E668D9D0068903E /* ImageCollcetionViewCell.swift */,
 				2CC64DF21E65421500C6D9F7 /* Main.storyboard */,
@@ -261,6 +266,7 @@
 				2CA669F21EFB86E600F087D1 /* BookmarkViewController.swift */,
 				F7A99D451EFE0E4600C34154 /* AddBookmarkViewController.swift */,
 				F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */,
+				F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -440,8 +446,10 @@
 				2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */,
 				2C47C4EE1EFB51C9002CD06A /* XMLElement.m in Sources */,
 				F7C8569C1EF9EB0700FFBDF8 /* ScaleAnimator.swift in Sources */,
+				F7BC42B81EFFEF3700EF8D79 /* BookmarkManager.swift in Sources */,
 				F7C8569D1EF9EB0700FFBDF8 /* ScaleAnimatorCoordinator.swift in Sources */,
 				2C47C4ED1EFB51C9002CD06A /* XMLDocument.m in Sources */,
+				F7BC42BA1F01553A00EF8D79 /* BookmarkCollectionViewCell.swift in Sources */,
 				2C47C4FD1EFB5646002CD06A /* FavIcon.swift in Sources */,
 				F7767F671E6E5175004062E6 /* SettingToggleCell.swift in Sources */,
 				F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */,

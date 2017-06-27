@@ -5,3 +5,17 @@
   Created by yan on 2017/06/27.
   Copyright © 2017 mmd. All rights reserved.
 */
+
+"Confirm"="Confirm";
+"Bookmark"="Bookmark";
+"Browser"="Browser";
+"Help"="Help";
+"Info"="Info";
+"Feedback"="Feedback";
+"Rate"="Rate";
+"EULA"="EULA";
+"Add"="Add";
+"Privacy policy"="Privacy policy";
+"Cannot open email"="Email is required, but can't open it right now, please go to Settings - Email and setup.";
+"Feedback Title"="Feedback for WebKyu";
+"Thanks for your advice"="Thanks for your advice";

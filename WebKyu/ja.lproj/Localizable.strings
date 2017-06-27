@@ -5,3 +5,17 @@
   Created by yan on 2017/06/27.
   Copyright © 2017 mmd. All rights reserved.
 */
+
+"Confirm"="確認";
+"Bookmark"="ブックマーク";
+"Browser"="ブラウザ";
+"Help"="ヘルプ";
+"Info"="インフォ";
+"Feedback"="フィードバック";
+"Rate"="レビューを書く";
+"EULA"="利用許諾契約";
+"Add"="添加";
+"Privacy policy"="プライバシーポリシー";
+"Cannot open email"="メールアドレスの登録が完了していません。設定画面の「メールアドレス」より登録をお願いします。";
+"Feedback Title"="WebKyuに意見・要望";
+"Thanks for your advice"="ご意見ありがとうございます。";

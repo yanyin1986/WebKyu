@@ -16,10 +16,12 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var bookmarks: [Bookmark]!
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bookmarks = BookmarkManager.shared.bookmarks
+        addButton.title = NSLocalizedString("Add", comment: "")
     }
 
     override func didReceiveMemoryWarning() {

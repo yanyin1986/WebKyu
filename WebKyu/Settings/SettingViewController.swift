@@ -26,19 +26,19 @@ enum WKSettingType: CustomStringConvertible {
     var description: String {
         switch self {
         case .favoriteBookmark:
-            return "书签"
+            return NSLocalizedString("Bookmark", comment: "")
 
         case .howToUse:
-            return "使用帮助"
+            return NSLocalizedString("Help", comment: "")
         case .feedback:
-            return "反馈意见"
+            return NSLocalizedString("Feedback", comment: "")
         case .rate:
-            return "评价"
+            return NSLocalizedString("Rate", comment: "")
 
         case .eula:
-            return "最终用户协议"
+            return NSLocalizedString("EULA", comment: "")
         case .privacy:
-            return "隐私协议"
+            return NSLocalizedString("Privacy policy", comment: "")
         }
     }
 }
@@ -80,14 +80,14 @@ func appVersion() -> String {
 class SettingViewController: UIViewController {
 
     fileprivate let settingSource: [WKSSection] = [
-        WKSSection(section: "Browser",
+        WKSSection(section: NSLocalizedString("Browser", comment: ""),
                    options: [ WKSOption(type: .favoriteBookmark, accessoryType: .disclosureIndicator)],
                    footer: nil),
-        WKSSection(section: "Help",
+        WKSSection(section: NSLocalizedString("Help", comment: ""),
                    options: [ WKSOption(type: .feedback, accessoryType: .disclosureIndicator),
                               WKSOption(type: .rate, accessoryType: .disclosureIndicator), ],
                    footer: nil),
-        WKSSection(section: "Info",
+        WKSSection(section: NSLocalizedString("Info", comment: ""),
                    options: [ WKSOption(type: .eula, accessoryType: .disclosureIndicator),
                               WKSOption(type: .privacy, accessoryType: . disclosureIndicator), ],
                    footer: appVersion())
@@ -193,8 +193,8 @@ extension SettingViewController: UITableViewDelegate {
         }
 
         let mail = MFMailComposeViewController()
-        mail.setSubject(NSLocalizedString("Feedback for WEBKYU", comment: "feedback email title"))
-        mail.setToRecipients(["gennyinn@gmail.com"])
+        mail.setSubject(NSLocalizedString("Feedback Title", comment: "feedback email title"))
+        mail.setToRecipients(["feedback.mmd.dev@gmail.com"])
         // TODO: message body with saved function
         mail.setMessageBody("", isHTML: false)
         mail.mailComposeDelegate = self

@@ -464,6 +464,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="3jE-qj-C9Z" id="Gfd-Qc-Lck"/>
                         <outlet property="tableView" destination="A54-bO-7as" id="EGj-uh-H3N"/>
                         <outlet property="view" destination="Fi0-JM-PBO" id="mtZ-nZ-GE4"/>
                     </connections>

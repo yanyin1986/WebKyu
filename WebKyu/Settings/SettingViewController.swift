@@ -87,12 +87,10 @@ class SettingViewController: UIViewController {
                    options: [ WKSOption(type: .feedback, accessoryType: .disclosureIndicator),
                               WKSOption(type: .rate, accessoryType: .disclosureIndicator), ],
                    footer: appVersion()),
-        /*
         WKSSection(section: "Info",
                    options: [ WKSOption(type: .eula, accessoryType: .disclosureIndicator),
                               WKSOption(type: .privacy, accessoryType: . disclosureIndicator), ],
                    footer: appVersion())
-        */
     ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -109,6 +107,18 @@ class SettingViewController: UIViewController {
     
     @IBAction func hideSettings(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else { return }
+
+        if id == "showWebView" {
+            guard let param = sender as? String else { return }
+
+            let webViewController = segue.destination as! WebViewController
+            webViewController.title = param
+            webViewController.localUrl = Bundle.main.url(forResource: param, withExtension: "html")
+        }
     }
 }
 
@@ -206,11 +216,11 @@ extension SettingViewController: UITableViewDelegate {
     }
 
     func showEULA() {
-        
+        self.performSegue(withIdentifier: "showWebView", sender: "eula")
     }
 
     func showPrivacy() {
-        
+        self.performSegue(withIdentifier: "showWebView", sender: "privacy")
     }
 }
 

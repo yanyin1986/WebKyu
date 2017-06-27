@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C05A7051F02054500614672 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C05A7041F02054500614672 /* privacy.html */; };
+		2C05A7071F02065700614672 /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C05A7061F02065700614672 /* eula.html */; };
+		2C05A70C1F0206D000614672 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A70B1F0206D000614672 /* WebViewController.swift */; };
 		2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134B61E666DCC0068903E /* Data+MIMEType.swift */; };
 		2C4134B91E6672F70068903E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134B81E6672F70068903E /* Global.swift */; };
 		2C4134BB1E6673980068903E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BA1E6673980068903E /* Image.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C05A7041F02054500614672 /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
+		2C05A7061F02065700614672 /* eula.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eula.html; sourceTree = "<group>"; };
+		2C05A70B1F0206D000614672 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		2C4134B61E666DCC0068903E /* Data+MIMEType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+MIMEType.swift"; sourceTree = "<group>"; };
 		2C4134B81E6672F70068903E /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2C4134BA1E6673980068903E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 				2C4134B81E6672F70068903E /* Global.swift */,
 				2C4134BA1E6673980068903E /* Image.swift */,
 				F7767F5E1E6E486E004062E6 /* CountButton.swift */,
+				2C05A7041F02054500614672 /* privacy.html */,
+				2C05A7061F02065700614672 /* eula.html */,
 			);
 			path = WebKyu;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 				F7A99D451EFE0E4600C34154 /* AddBookmarkViewController.swift */,
 				F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */,
 				F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */,
+				2C05A70B1F0206D000614672 /* WebViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -341,10 +350,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C05A7051F02054500614672 /* privacy.html in Resources */,
 				2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */,
 				F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */,
 				F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */,
 				2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */,
+				2C05A7071F02065700614672 /* eula.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */,
+				2C05A70C1F0206D000614672 /* WebViewController.swift in Sources */,
 				2C47C4FE1EFB5646002CD06A /* IconExtraction.swift in Sources */,
 				2C47C4F61EFB5630002CD06A /* DetectedIcon.swift in Sources */,
 				2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */,

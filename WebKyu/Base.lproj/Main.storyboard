@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G18a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="90N-b1-Q8e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="90N-b1-Q8e">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -64,15 +64,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-kp-UG1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="nvY-kp-UG1" firstAttribute="leading" secondItem="yUy-Ok-njE" secondAttribute="leading" id="1zE-cg-IA1"/>
-                                            <constraint firstItem="nvY-kp-UG1" firstAttribute="top" secondItem="yUy-Ok-njE" secondAttribute="top" id="FVj-OF-dxh"/>
-                                            <constraint firstAttribute="trailing" secondItem="nvY-kp-UG1" secondAttribute="trailing" id="Kgk-Ot-KJJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="nvY-kp-UG1" secondAttribute="bottom" id="WYY-Yr-nDI"/>
+                                            <constraint firstItem="nvY-kp-UG1" firstAttribute="leading" secondItem="yUy-Ok-njE" secondAttribute="leading" constant="8" id="1zE-cg-IA1"/>
+                                            <constraint firstItem="nvY-kp-UG1" firstAttribute="top" secondItem="yUy-Ok-njE" secondAttribute="top" constant="8" id="FVj-OF-dxh"/>
+                                            <constraint firstAttribute="trailing" secondItem="nvY-kp-UG1" secondAttribute="trailing" constant="8" id="Kgk-Ot-KJJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="nvY-kp-UG1" secondAttribute="bottom" constant="8" id="WYY-Yr-nDI"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="nvY-kp-UG1" id="dJ9-hQ-UCm"/>
@@ -105,7 +105,7 @@
                                                     <rect key="frame" x="94.5" y="13" width="24" height="24"/>
                                                     <state key="normal" image="close"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-tD-MNN">
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-tD-MNN">
                                                     <rect key="frame" x="141.5" y="13" width="24" height="24"/>
                                                     <state key="normal" image="attention"/>
                                                     <state key="selected" image="attention_fill"/>
@@ -113,7 +113,7 @@
                                                         <action selector="toggleAttection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xl4-74-2MC"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-HY-IFo" customClass="CountButton" customModule="WebKyu" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-HY-IFo" customClass="CountButton" customModule="WebKyu" customModuleProvider="target">
                                                     <rect key="frame" x="188" y="12" width="26" height="26"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -132,7 +132,7 @@
                                                     <rect key="frame" x="236" y="13" width="24" height="24"/>
                                                     <state key="normal" image="filter"/>
                                                     <connections>
-                                                        <segue destination="l6h-PP-3Xf" kind="presentation" id="Zhc-Aq-1F4"/>
+                                                        <action selector="filterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OU-Qa-K2y"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -324,7 +324,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="3lz-py-byX">
                         <barButtonItem key="backBarButtonItem" title="close" id="Ifo-LA-rAC"/>
-                        <barButtonItem key="leftBarButtonItem" image="right" id="EPv-Zb-dov">
+                        <barButtonItem key="leftBarButtonItem" image="unfold" id="EPv-Zb-dov">
                             <connections>
                                 <action selector="hideSettings:" destination="z42-LG-9ug" id="Cq7-eB-9fc"/>
                             </connections>
@@ -334,11 +334,46 @@
                         <outlet property="tableView" destination="Wvb-bc-duc" id="Gaz-Nd-kKH"/>
                         <outlet property="view" destination="tgo-dd-lqK" id="Si2-bG-sMm"/>
                         <segue destination="Fjc-3e-dx2" kind="show" identifier="showBookmark" id="Lmf-iI-3yj"/>
+                        <segue destination="K3V-5W-4St" kind="show" identifier="showWebView" id="Ytl-hM-VAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyJ-JE-69d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2766" y="-940"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="WVR-Lw-lEQ">
+            <objects>
+                <viewController id="K3V-5W-4St" customClass="WebViewController" customModule="WebKyu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aWL-k4-WDg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0MB-2L-KKj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VrU-f7-mvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-h1-ICh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0MB-2L-KKj" firstAttribute="top" secondItem="Kva-h1-ICh" secondAttribute="bottom" id="CZa-NX-ZXl"/>
+                            <constraint firstItem="Kva-h1-ICh" firstAttribute="top" secondItem="VrU-f7-mvQ" secondAttribute="top" id="IBB-vT-Zs4"/>
+                            <constraint firstItem="Kva-h1-ICh" firstAttribute="leading" secondItem="VrU-f7-mvQ" secondAttribute="leading" id="ZAC-ty-Nd1"/>
+                            <constraint firstAttribute="trailing" secondItem="Kva-h1-ICh" secondAttribute="trailing" id="asq-bN-B7t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="tRL-nW-CmF"/>
+                    <connections>
+                        <outlet property="webView" destination="Kva-h1-ICh" id="XEI-Lj-XBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqm-WL-bJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3652.5" y="-1597.1830985915494"/>
         </scene>
         <!--Bookmark-->
         <scene sceneID="LxG-Y5-cNg">
@@ -625,6 +660,7 @@
         <image name="setting" width="19" height="20"/>
         <image name="square" width="24" height="24"/>
         <image name="square_check" width="24" height="24"/>
+        <image name="unfold" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.56470588235294117" green="0.56470588235294117" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
 </document>

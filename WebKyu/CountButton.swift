@@ -24,8 +24,7 @@ class CountButton: UIButton {
     }
     
     private func commonInit() {
-        self.isEnabled = false
-        
+        self.isEnabled = true
         self.layer.masksToBounds = true
         self.layer.cornerRadius = self.bounds.size.min / 2.0
     }

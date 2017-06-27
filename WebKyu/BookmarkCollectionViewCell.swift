@@ -11,4 +11,9 @@ import UIKit
 class BookmarkCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
+
+    override func awakeFromNib() {
+        imageView.layer.shadowOpacity = 0.3
+        imageView.layer.shadowOffset = CGSize.zero
+    }
 }

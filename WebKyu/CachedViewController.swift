@@ -24,6 +24,7 @@ class CachedViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         // Do any additional setup after loading the view.
         images = Global.share.images()
+        collectionView.backgroundColor = UIColor(red: 0xee/255.0, green: 0xee/255.0, blue: 0xee/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

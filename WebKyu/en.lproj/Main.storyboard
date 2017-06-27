@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -465,6 +464,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="3jE-qj-C9Z" id="Gfd-Qc-Lck"/>
+                        <outlet property="editItem" destination="WYB-Wf-H21" id="W7Y-Io-95p"/>
                         <outlet property="tableView" destination="A54-bO-7as" id="EGj-uh-H3N"/>
                         <outlet property="view" destination="Fi0-JM-PBO" id="mtZ-nZ-GE4"/>
                     </connections>
@@ -472,58 +472,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mnf-TN-dzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3661.5999999999999" y="-940.47976011994012"/>
-        </scene>
-        <!--Add Bookmark-->
-        <scene sceneID="bxd-WM-eXV">
-            <objects>
-                <viewController id="lF5-DJ-RFK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mTL-0I-UcG"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cuw-Hb-fgN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bgi-Ye-goR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7TT-fN-5bT">
-                                <rect key="frame" x="16" y="70" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="81Y-Dp-A0Y"/>
-                                    <constraint firstAttribute="width" constant="80" id="uSc-0g-1Ft"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1F1-eD-nnr">
-                                <rect key="frame" x="104" y="75" width="200" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-ie-Jmr">
-                                <rect key="frame" x="104" y="115" width="200" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7TT-fN-5bT" firstAttribute="leading" secondItem="bgi-Ye-goR" secondAttribute="leadingMargin" id="1Gy-qs-vci"/>
-                            <constraint firstItem="1F1-eD-nnr" firstAttribute="trailing" secondItem="bgi-Ye-goR" secondAttribute="trailingMargin" id="9lz-ER-Fsz"/>
-                            <constraint firstItem="1F1-eD-nnr" firstAttribute="bottom" secondItem="7TT-fN-5bT" secondAttribute="centerY" constant="-5" id="Fiz-Wx-gAN"/>
-                            <constraint firstItem="7TT-fN-5bT" firstAttribute="top" secondItem="mTL-0I-UcG" secondAttribute="bottom" constant="50" id="YU4-a6-8uL"/>
-                            <constraint firstItem="vx8-ie-Jmr" firstAttribute="top" secondItem="7TT-fN-5bT" secondAttribute="centerY" constant="5" id="bUQ-QB-EtJ"/>
-                            <constraint firstItem="vx8-ie-Jmr" firstAttribute="trailing" secondItem="bgi-Ye-goR" secondAttribute="trailingMargin" id="lce-Ee-pkh"/>
-                            <constraint firstItem="vx8-ie-Jmr" firstAttribute="leading" secondItem="7TT-fN-5bT" secondAttribute="trailing" constant="8" id="oZ9-DL-wYL"/>
-                            <constraint firstItem="1F1-eD-nnr" firstAttribute="leading" secondItem="7TT-fN-5bT" secondAttribute="trailing" constant="8" id="s6K-TR-QTA"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Bookmark" id="BNd-jZ-OPc">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Save" id="qnl-bK-DeE"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6v-LR-oAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4456.8000000000002" y="-945.87706146926541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ve4-Vd-n7p">

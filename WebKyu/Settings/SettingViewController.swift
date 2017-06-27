@@ -98,6 +98,7 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = NSLocalizedString("Setting", comment: "")
     }
 
     override func didReceiveMemoryWarning() {

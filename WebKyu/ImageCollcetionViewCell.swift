@@ -15,6 +15,7 @@ class ImageCollcetionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = UIColor(red: 0xee/255.0, green: 0xee/255.0, blue: 0xee/255.0, alpha: 1.0)
         imageView.runloopMode = RunLoopMode.defaultRunLoopMode.rawValue
     }
 }

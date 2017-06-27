@@ -24,6 +24,7 @@ class CachedViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         // Do any additional setup after loading the view.
         images = Global.share.images()
+        collectionView.backgroundColor = UIColor(red: 0xee/255.0, green: 0xee/255.0, blue: 0xee/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +71,7 @@ class CachedViewController: UIViewController, UICollectionViewDataSource, UIColl
     lazy var toolView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         let button = UIButton(frame: CGRect(x: 270, y: 0, width: 50, height: 50))
+        button.setImage(UIImage(named: "share"), for: .normal)
         button.addTarget(self, action: #selector(share(_:)), for: UIControlEvents.touchUpInside)
         view.addSubview(button)
         button.snp.makeConstraints({ (make) in

@@ -13,6 +13,10 @@ import EasyAnimation
 import ImageIO
 import Kingfisher
 
+extension Notification.Name {
+    static let BookmarksDataSourceUpdate = Notification.Name("mmd.PuppyBrowser.bookmarksDataSourceUpdate")
+}
+
 class ViewController: UIViewController {
     
     var _imageCount: Int = 0
@@ -36,7 +40,7 @@ class ViewController: UIViewController {
     
     @IBOutlet
     weak var _filterButton: UIButton!
-    
+
     @IBOutlet
     weak var _countButton: UIButton!
     
@@ -44,19 +48,37 @@ class ViewController: UIViewController {
     weak var urlTextField: UITextField!
 
     @IBOutlet
-    weak var collectionView: UICollectionView!
+    weak var collectionView: UICollectionView?
 
     private var _timer: Timer?
+
+    private var _updateBookmarks: Bool = false
 
 //    fileprivate var images: [MWPhoto] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+
+        NotificationCenter.default.addObserver(self, selector: #selector(bookmarksDataSourceUpdated), name: .BookmarksDataSourceUpdate, object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc
+    func bookmarksDataSourceUpdated() {
+        _updateBookmarks = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        if _updateBookmarks {
+            _updateBookmarks = false
+            self.collectionView?.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,7 +86,7 @@ class ViewController: UIViewController {
     }
     
     func loadUrl(url: URL) {
-        self.collectionView.removeFromSuperview()
+        self.collectionView?.removeFromSuperview()
         if _webView == nil {
             _webView = UIWebView(frame: self.view.bounds)
             _webView!.backgroundColor = UIColor.white
@@ -111,35 +133,15 @@ class ViewController: UIViewController {
         }
     }
 
-//    @IBAction func showPhotoBrowser(_ sender: Any) {
-////        self.images.removeAll()
-////        self.images.append(contentsOf: Global.share.mwPhoto())
-//
-//        let browser = PhotoBrowser(showByViewController: self, delegate: self)
-//        browser.show(index: 0)
-//        /*
-//        guard let browser = MWPhotoBrowser(delegate: self) else {
-//            return
-//        }
-//
-//        browser.displayActionButton = true
-//        browser.displayNavArrows = true
-//        browser.displaySelectionButtons = false // Whether selection buttons are shown on each image (defaults to NO)
-//        browser.zoomPhotosToFill = true
-//        browser.alwaysShowControls = true
-//        browser.enableGrid = true
-//        browser.startOnGrid = true
-//
-//        self.navigationController?.pushViewController(browser, animated: true)
-// */
-//        //(browser, animated: true, completion: nil)
-//    }
-
     @IBAction func toggleAttection(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        _filterButton.isEnabled = sender.isSelected
+//        _filterButton.isEnabled = sender.isSelected
         _countButton.isEnabled = sender.isSelected
         MDURLProtocol.tracking = sender.isSelected
+    }
+
+    @IBAction func filterButtonPressed(_ sender: UIButton) {
+        
     }
 }
 
@@ -184,62 +186,4 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
-//
-//extension ViewController: PhotoBrowserDelegate {
-//    func numberOfPhotos(in photoBrowser: PhotoBrowser) -> Int {
-//        return Global.share.images().count
-//    }
-//
-//    /// 实现本方法以返回默认图片，缩略图或占位图
-//    func photoBrowser(_ photoBrowser: PhotoBrowser, thumbnailImageForIndex index: Int) -> UIImage? {
-//        let image = Global.share.images()[index]
-//        guard let src = CGImageSourceCreateWithURL(image.url as CFURL, nil) else {
-//            return nil
-//        }
-//        let scale = UIScreen.main.scale
-//        let w = (UIScreen.main.bounds.width / 3) * scale
-//        let d : [NSObject:AnyObject] = [
-//            kCGImageSourceShouldAllowFloat : true as AnyObject,
-//            kCGImageSourceCreateThumbnailWithTransform : true as AnyObject,
-//            kCGImageSourceCreateThumbnailFromImageAlways : true as AnyObject,
-//            kCGImageSourceThumbnailMaxPixelSize : w as AnyObject
-//        ]
-//        let imref = CGImageSourceCreateThumbnailAtIndex(src, 0, d as CFDictionary)
-//        return UIImage(cgImage: imref!, scale: scale, orientation: .up)
-//    }
-//
-//    /// 实现本方法以返回默认图所在view，在转场动画完成后将会修改这个view的hidden属性
-//    /// 比如你可返回ImageView，或整个Cell
-//    func photoBrowser(_ photoBrowser: PhotoBrowser, thumbnailViewForIndex index: Int) -> UIView? {
-//        return
-//    }
-//
-//    /// 实现本方法以返回高质量图片。可选
-//    func photoBrowser(_ photoBrowser: PhotoBrowser, highQualityImageForIndex index: Int) -> UIImage? {
-//        return UIImage(contentsOfFile: Global.share.images()[index].url.path)
-//    }
-//
-//    /// 长按时回调。可选
-//    func photoBrowser(_ photoBrowser: PhotoBrowser, didLongPressForIndex index: Int, image: UIImage) {
-//
-//    }
-//}
-
-/*
-extension ViewController: MWPhotoBrowserDelegate {
-
-    func numberOfPhotos(in photoBrowser: MWPhotoBrowser!) -> UInt {
-        return UInt(self.images.count)
-    }
-
-    func photoBrowser(_ photoBrowser: MWPhotoBrowser!, photoAt index: UInt) -> MWPhotoProtocol! {
-        return self.images[Int(index)]
-    }
-
-    func photoBrowser(_ photoBrowser: MWPhotoBrowser!, thumbPhotoAt index: UInt) -> MWPhotoProtocol! {
-        return self.images[Int(index)]
-    }
-
-}
- */
 

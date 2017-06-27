@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C05A7051F02054500614672 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C05A7041F02054500614672 /* privacy.html */; };
+		2C05A7071F02065700614672 /* eula.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C05A7061F02065700614672 /* eula.html */; };
+		2C05A70C1F0206D000614672 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A70B1F0206D000614672 /* WebViewController.swift */; };
 		2C4134B71E666DCC0068903E /* Data+MIMEType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134B61E666DCC0068903E /* Data+MIMEType.swift */; };
 		2C4134B91E6672F70068903E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134B81E6672F70068903E /* Global.swift */; };
 		2C4134BB1E6673980068903E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4134BA1E6673980068903E /* Image.swift */; };
@@ -34,6 +37,7 @@
 		2CC64E021E65609200C6D9F7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E001E65609200C6D9F7 /* SettingViewController.swift */; };
 		2CC64E071E65623900C6D9F7 /* Storeage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E061E65623900C6D9F7 /* Storeage.swift */; };
 		2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */; };
+		2CEE1BD31F0222C00071D1CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CEE1BD51F0222C00071D1CB /* Localizable.strings */; };
 		3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */; };
 		F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */; };
 		F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7767F5C1E6E4591004062E6 /* Assets.xcassets */; };
@@ -58,6 +62,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C05A7041F02054500614672 /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
+		2C05A7061F02065700614672 /* eula.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eula.html; sourceTree = "<group>"; };
+		2C05A70B1F0206D000614672 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		2C4134B61E666DCC0068903E /* Data+MIMEType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+MIMEType.swift"; sourceTree = "<group>"; };
 		2C4134B81E6672F70068903E /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2C4134BA1E6673980068903E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -88,13 +95,18 @@
 		2CC64DEB1E65421500C6D9F7 /* WebKyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebKyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC64DEE1E65421500C6D9F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC64DF01E65421500C6D9F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2CC64DF31E65421500C6D9F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CC64DF81E65421500C6D9F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CC64DFA1E65421500C6D9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CC64E001E65609200C6D9F7 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2CC64E041E6561EA00C6D9F7 /* WebKyu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebKyu.entitlements; sourceTree = "<group>"; };
 		2CC64E061E65623900C6D9F7 /* Storeage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storeage.swift; sourceTree = "<group>"; };
 		2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDURLProtocol.swift; sourceTree = "<group>"; };
+		2CEE1BD41F0222C00071D1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CEE1BD61F0222C20071D1CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CEE1BD71F0222C40071D1CB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2CEE1BD81F0222C50071D1CB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2CEE1BD91F0222D10071D1CB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CEE1BDA1F0222F30071D1CB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.release.xcconfig"; sourceTree = "<group>"; };
 		AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebKyu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +236,9 @@
 				2C4134B81E6672F70068903E /* Global.swift */,
 				2C4134BA1E6673980068903E /* Image.swift */,
 				F7767F5E1E6E486E004062E6 /* CountButton.swift */,
+				2C05A7041F02054500614672 /* privacy.html */,
+				2C05A7061F02065700614672 /* eula.html */,
+				2CEE1BD51F0222C00071D1CB /* Localizable.strings */,
 			);
 			path = WebKyu;
 			sourceTree = "<group>";
@@ -267,6 +282,7 @@
 				F7A99D451EFE0E4600C34154 /* AddBookmarkViewController.swift */,
 				F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */,
 				F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */,
+				2C05A70B1F0206D000614672 /* WebViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -325,6 +341,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = 2CC64DE21E65421500C6D9F7;
 			productRefGroup = 2CC64DEC1E65421500C6D9F7 /* Products */;
@@ -341,10 +360,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C05A7051F02054500614672 /* privacy.html in Resources */,
 				2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */,
 				F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */,
+				2CEE1BD31F0222C00071D1CB /* Localizable.strings in Resources */,
 				F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */,
 				2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */,
+				2C05A7071F02065700614672 /* eula.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC64DF11E65421500C6D9F7 /* ViewController.swift in Sources */,
+				2C05A70C1F0206D000614672 /* WebViewController.swift in Sources */,
 				2C47C4FE1EFB5646002CD06A /* IconExtraction.swift in Sources */,
 				2C47C4F61EFB5630002CD06A /* DetectedIcon.swift in Sources */,
 				2C4134BD1E668D0A0068903E /* CachedViewController.swift in Sources */,
@@ -468,7 +491,7 @@
 		2CC64DF21E65421500C6D9F7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CC64DF31E65421500C6D9F7 /* Base */,
+				2CEE1BDA1F0222F30071D1CB /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -481,6 +504,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		2CEE1BD51F0222C00071D1CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CEE1BD41F0222C00071D1CB /* Base */,
+				2CEE1BD61F0222C20071D1CB /* en */,
+				2CEE1BD71F0222C40071D1CB /* zh-Hans */,
+				2CEE1BD81F0222C50071D1CB /* zh-Hant */,
+				2CEE1BD91F0222D10071D1CB /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -488,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -538,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

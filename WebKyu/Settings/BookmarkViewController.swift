@@ -16,10 +16,16 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var bookmarks: [Bookmark]!
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editItem: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bookmarks = BookmarkManager.shared.bookmarks
+        addButton.title = NSLocalizedString("Add", comment: "")
+        editItem.title = NSLocalizedString("Edit", comment: "")
+        self.title = NSLocalizedString("Bookmark", comment: "")
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,6 +84,10 @@ class BookmarkViewController: UIViewController, UITableViewDataSource, UITableVi
     private func persistentBookmarks() {
         DispatchQueue.global(qos: .background).async {
             BookmarkManager.shared.bookmarks = self.bookmarks
+
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .BookmarksDataSourceUpdate, object: nil)
+            }
         }
     }
 

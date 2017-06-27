@@ -20,7 +20,7 @@ enum TrackRequirable {
 
 final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
     
-    static var tracking: Bool = false
+    static var tracking: Bool = true
     
     private var _dataTask: URLSessionDataTask?
     private var _data: Data?
@@ -43,6 +43,7 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
               let scheme = url.scheme else {
             return false
         }
+        print(url)
         
         guard URLProtocol.property(forKey: MDURLProtocolKey, in: request) == nil else {
             return false

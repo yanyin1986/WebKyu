@@ -307,7 +307,7 @@
 				TargetAttributes = {
 					2CC64DEA1E65421500C6D9F7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3Z3K367TN7;
+						DevelopmentTeam = BA96H9FD2B;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -584,7 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
-				DEVELOPMENT_TEAM = 3Z3K367TN7;
+				DEVELOPMENT_TEAM = BA96H9FD2B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Core/Sources",
@@ -601,7 +601,7 @@
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mmd.WebKyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/FavIcon/libXML2/WebKyu-Bridging-Header.h";
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WebKyu/WebKyu.entitlements;
-				DEVELOPMENT_TEAM = 3Z3K367TN7;
+				DEVELOPMENT_TEAM = BA96H9FD2B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Core/Sources",
@@ -634,7 +634,7 @@
 				INFOPLIST_FILE = WebKyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mmd.PuppyBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.mmd.WebKyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "WebKyu/FavIcon/libXML2/WebKyu-Bridging-Header.h";

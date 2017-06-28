@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1092645477566-smunc150mtja0qrg5bu1ipkt3gs9opb1.apps.googleusercontent.com</string>
+	<string>534956863557-mekmvs30enasm5udadsgmpmqd9e5qmd8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1092645477566-smunc150mtja0qrg5bu1ipkt3gs9opb1</string>
+	<string>com.googleusercontent.apps.534956863557-mekmvs30enasm5udadsgmpmqd9e5qmd8</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB8zdvXPrVrU03tU2d-JZqgJ3YjmCib0sE</string>
+	<string>AIzaSyBs6hJ7Ucs-930wDHyFXHGoDxa5VIQJ-Ac</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1092645477566</string>
+	<string>534956863557</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>mmd.WebPuppy</string>
+	<string>dev.mmd.WebKyu</string>
 	<key>PROJECT_ID</key>
-	<string>webpuppy-ec79b</string>
+	<string>webkyu-4f27c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>webpuppy-ec79b.appspot.com</string>
+	<string>webkyu-4f27c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1092645477566:ios:4500c42206652d66</string>
+	<string>1:534956863557:ios:af197228478f2adc</string>
 	<key>DATABASE_URL</key>
-	<string>https://webpuppy-ec79b.firebaseio.com</string>
+	<string>https://webkyu-4f27c.firebaseio.com</string>
 </dict>
 </plist>

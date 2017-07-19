@@ -11,7 +11,7 @@ import Kingfisher
 import SQLite
 
 
-let appGroupId = "group.mmd.PuppyBrowser"
+let appGroupId = "group.dev.mmd.WebKyu"
 
 protocol Storeage: class {
     func imageCache() -> ImageCache

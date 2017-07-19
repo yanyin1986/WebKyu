@@ -39,7 +39,6 @@
 		2CC64E091E6565B400C6D9F7 /* MDURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC64E081E6565B400C6D9F7 /* MDURLProtocol.swift */; };
 		2CEE1BD31F0222C00071D1CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CEE1BD51F0222C00071D1CB /* Localizable.strings */; };
 		3392B0204EA1984E7F900D9E /* Pods_WebKyu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */; };
-		F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */; };
 		F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7767F5C1E6E4591004062E6 /* Assets.xcassets */; };
 		F7767F5F1E6E486E004062E6 /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F5E1E6E486E004062E6 /* CountButton.swift */; };
 		F7767F611E6E49E1004062E6 /* CGGeometry+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7767F601E6E49E1004062E6 /* CGGeometry+.swift */; };
@@ -51,6 +50,7 @@
 		F7BC42B61EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */; };
 		F7BC42B81EFFEF3700EF8D79 /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */; };
 		F7BC42BA1F01553A00EF8D79 /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BC42B91F01553A00EF8D79 /* BookmarkCollectionViewCell.swift */; };
+		F7BC42BC1F029FF700EF8D79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7BC42BB1F029FF700EF8D79 /* GoogleService-Info.plist */; };
 		F7C856961EF9EB0700FFBDF8 /* PhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */; };
 		F7C856971EF9EB0700FFBDF8 /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */; };
 		F7C856981EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */; };
@@ -110,7 +110,6 @@
 		7E09F5B589C5337C0431DBC6 /* Pods-WebKyu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.release.xcconfig"; sourceTree = "<group>"; };
 		AC9C6EBD4877AA5BFAC2DCBE /* Pods_WebKyu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebKyu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D5981C0A6A5949B63AC406 /* Pods-WebKyu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebKyu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebKyu/Pods-WebKyu.debug.xcconfig"; sourceTree = "<group>"; };
-		F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7767F5C1E6E4591004062E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7767F5E1E6E486E004062E6 /* CountButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountButton.swift; sourceTree = "<group>"; };
 		F7767F601E6E49E1004062E6 /* CGGeometry+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGGeometry+.swift"; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		F7BC42B51EFFDB9B00EF8D79 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		F7BC42B71EFFEF3700EF8D79 /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
 		F7BC42B91F01553A00EF8D79 /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7BC42BB1F029FF700EF8D79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7C8568E1EF9EB0700FFBDF8 /* PhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowser.swift; sourceTree = "<group>"; };
 		F7C8568F1EF9EB0700FFBDF8 /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
 		F7C856901EF9EB0700FFBDF8 /* PhotoBrowserDefaultPageControlDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserDefaultPageControlDelegate.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				2CC64DF71E65421500C6D9F7 /* LaunchScreen.storyboard */,
 				F7767F5C1E6E4591004062E6 /* Assets.xcassets */,
 				2CC64DFA1E65421500C6D9F7 /* Info.plist */,
-				F7767F591E6DA1AB004062E6 /* GoogleService-Info.plist */,
+				F7BC42BB1F029FF700EF8D79 /* GoogleService-Info.plist */,
 				2C4134B81E6672F70068903E /* Global.swift */,
 				2C4134BA1E6673980068903E /* Image.swift */,
 				F7767F5E1E6E486E004062E6 /* CountButton.swift */,
@@ -362,11 +362,11 @@
 			files = (
 				2C05A7051F02054500614672 /* privacy.html in Resources */,
 				2CC64DF91E65421500C6D9F7 /* LaunchScreen.storyboard in Resources */,
-				F7767F5A1E6DA1AB004062E6 /* GoogleService-Info.plist in Resources */,
 				2CEE1BD31F0222C00071D1CB /* Localizable.strings in Resources */,
 				F7767F5D1E6E4591004062E6 /* Assets.xcassets in Resources */,
 				2CC64DF41E65421500C6D9F7 /* Main.storyboard in Resources */,
 				2C05A7071F02065700614672 /* eula.html in Resources */,
+				F7BC42BC1F029FF700EF8D79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

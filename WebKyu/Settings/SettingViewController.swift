@@ -205,7 +205,7 @@ extension SettingViewController: UITableViewDelegate {
     }
 
     func showRate() {
-        let appStoreUrl = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1181876149"
+        let appStoreUrl = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1253024518"
         if let url = URL(string: appStoreUrl){
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)

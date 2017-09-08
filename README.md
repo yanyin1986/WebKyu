@@ -1,3 +1,4 @@
+![Image of Yaktocat](https://github.com/yanyin1986/WebKyu/blob/master/WebKyu/Assets.xcassets/AppIcon.appiconset/icon-180.png)
 # WebKyu
 
 这个是一个通过URLProtocol实现的轻量的浏览器，用于读取缓存的图片，当然如果愿意的话，也可以读取html，js等等，各种各样的文件，目前还没有支持读取视频。

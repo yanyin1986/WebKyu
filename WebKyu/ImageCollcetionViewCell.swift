@@ -15,6 +15,6 @@ class ImageCollcetionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageView.runloopMode = RunLoopMode.defaultRunLoopMode.rawValue
+        imageView.runloopMode = RunLoop.Mode.default.rawValue
     }
 }

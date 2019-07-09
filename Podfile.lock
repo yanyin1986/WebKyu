@@ -1,54 +1,36 @@
 PODS:
-  - Crashlytics (3.8.4):
-    - Fabric (~> 1.6.3)
-  - EasyAnimation (1.1.1)
-  - Fabric (1.6.11)
-  - Firebase/Core (3.14.0):
-    - FirebaseAnalytics (= 3.7.0)
-    - FirebaseCore (= 3.5.1)
-  - FirebaseAnalytics (3.7.0):
-    - FirebaseCore (~> 3.5)
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (3.5.1):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseInstanceID (1.0.9)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - Kingfisher (3.5.0)
-  - SnapKit (3.2.0)
-  - SQLite.swift (0.11.2):
-    - SQLite.swift/standard (= 0.11.2)
-  - SQLite.swift/standard (0.11.2)
+  - EasyAnimation (2.2.1)
+  - Kingfisher (4.10.1)
+  - SnapKit (4.2.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
 
 DEPENDENCIES:
-  - Crashlytics
   - EasyAnimation
-  - Fabric
-  - Firebase/Core
   - Kingfisher
-  - SnapKit (~> 3.2.0)
+  - SnapKit
   - SQLite.swift
   - YYImage
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EasyAnimation
+    - Kingfisher
+    - SnapKit
+    - SQLite.swift
+    - YYImage
+
 SPEC CHECKSUMS:
-  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  EasyAnimation: e67601df3eb57e86c570948a250ce162a5665b8a
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
-  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
-  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
-  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+  EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 233be1e35c7d31a66b5d556324bc230734c18b5b
+PODFILE CHECKSUM: edd5b545fb6ec00c660bd417e3459d3c9dfdd0a2
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.7.3

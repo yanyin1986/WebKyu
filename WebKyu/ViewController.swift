@@ -87,7 +87,8 @@ class ViewController: UIViewController {
         }
         _webView!.loadRequest(URLRequest(url: url))
     }
-    
+
+    @objc
     func checkImages() {
         let images = Global.share.images(withFilterOptions: nil)
         

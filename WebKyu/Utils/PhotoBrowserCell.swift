@@ -93,7 +93,7 @@ public class PhotoBrowserCell: UICollectionViewCell {
         
         scrollView.addSubview(imageView)
         imageView.clipsToBounds = true
-        imageView.runloopMode = RunLoopMode.defaultRunLoopMode.rawValue
+        imageView.runloopMode = RunLoop.Mode.default.rawValue
         
         contentView.addSubview(progressView)
         progressView.isHidden = true
@@ -150,13 +150,15 @@ public class PhotoBrowserCell: UICollectionViewCell {
         })
         self.doLayout()
     }
-    
+
+    @objc
     func onSingleTap() {
         if let dlg = photoBrowserCellDelegate {
             dlg.photoBrowserCellDidSingleTap(self)
         }
     }
-    
+
+    @objc
     func onDoubleTap(_ dbTap: UITapGestureRecognizer) {
         // 如果当前没有任何缩放，则放大到目标比例
         // 否则重置到原比例
@@ -172,7 +174,8 @@ public class PhotoBrowserCell: UICollectionViewCell {
             scrollView.setZoomScale(1.0, animated: true)
         }
     }
-    
+
+    @objc
     func onPan(_ pan: UIPanGestureRecognizer) {
         switch pan.state {
         case .began:
@@ -233,7 +236,8 @@ public class PhotoBrowserCell: UICollectionViewCell {
             }
         }
     }
-    
+
+    @objc
     func onLongPress(_ press: UILongPressGestureRecognizer) {
         if press.state == .began, let dlg = photoBrowserCellDelegate, let image = imageView.image {
             dlg.photoBrowserCell(self, didLongPressWith: image)

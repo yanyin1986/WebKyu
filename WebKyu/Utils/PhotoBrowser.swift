@@ -80,7 +80,7 @@ public class PhotoBrowser: UIViewController {
     public var photoSpacing: CGFloat = 30
     
     /// 图片缩放模式
-    public var imageScaleMode = UIViewContentMode.scaleAspectFill
+    public var imageScaleMode = UIView.ContentMode.scaleAspectFill
     
     /// 捏合手势放大图片时的最大允许比例
     public var imageMaximumZoomScale: CGFloat = 2.0
@@ -132,7 +132,7 @@ public class PhotoBrowser: UIViewController {
     private var onceViewDidAppeared = false
     
     /// 保存原windowLevel
-    private var originWindowLevel: UIWindowLevel!
+    private var originWindowLevel: UIWindow.Level!
     
     // MARK: - 公开方法
     /// 初始化，传入用于present出本VC的VC，以及实现了PhotoBrowserDelegate协议的对象
@@ -173,7 +173,7 @@ public class PhotoBrowser: UIViewController {
         // collectionView
         collectionView.frame = view.bounds
         collectionView.backgroundColor = UIColor.clear
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
@@ -232,10 +232,10 @@ public class PhotoBrowser: UIViewController {
             originWindowLevel = window.windowLevel
         }
         if cover {
-            if window.windowLevel == UIWindowLevelStatusBar + 1 {
+            if window.windowLevel == UIWindow.Level.statusBar + 1 {
                 return
             }
-            window.windowLevel = UIWindowLevelStatusBar + 1
+            window.windowLevel = UIWindow.Level.statusBar + 1
         } else {
             if window.windowLevel == originWindowLevel {
                 return

@@ -31,13 +31,14 @@ class SettingFilterViewController: UITableViewController {
         self.title = "Filter"
         if self.navigationController?.viewControllers.count == 1 {
             let item: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "unfold"),
-                                                        style: UIBarButtonItemStyle.plain,
+                                                        style: UIBarButtonItem.Style.plain,
                                                         target: self,
                                                         action: #selector(dismiss(_:)))
             self.navigationItem.leftBarButtonItem = item
         }
     }
-    
+
+    @objc
     func dismiss(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
@@ -81,7 +82,7 @@ class SettingFilterViewController: UITableViewController {
             cell.toggleSwitch.isOn = isAllImageTypeEnable
             cell.toggleSwitch.addTarget(self,
                                         action: #selector(switchValueChange(_:)),
-                                        for: UIControlEvents.valueChanged)
+                                        for: UIControl.Event.valueChanged)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "checkCell", for: indexPath) as! SettingCheckCell
@@ -95,17 +96,19 @@ class SettingFilterViewController: UITableViewController {
             cell.checkButton.tag = indexPath.row
             cell.checkButton.addTarget(self,
                                        action: #selector(imageTypeSupportChange(_:)),
-                                       for: UIControlEvents.touchUpInside)
+                                       for: UIControl.Event.touchUpInside)
             
             return cell
         }
     }
-    
+
+    @objc
     func switchValueChange(_ sender: UISwitch) {
         isAllImageTypeEnable = sender.isOn
-        self.tableView.reloadSections(IndexSet(integer: 1), with: UITableViewRowAnimation.fade)
+        self.tableView.reloadSections(IndexSet(integer: 1), with: UITableView.RowAnimation.fade)
     }
-    
+
+    @objc
     func imageTypeSupportChange(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }

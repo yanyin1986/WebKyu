@@ -41,15 +41,16 @@ final class MDURLProtocol: URLProtocol, URLSessionDataDelegate {
               let scheme = url.scheme else {
             return false
         }
+
+        print("url => \(url)")
         
         guard URLProtocol.property(forKey: MDURLProtocolKey, in: request) == nil else {
             return false
         }
         
         if (scheme == "http" || scheme == "https")
-            && url.pathExtension != ""
             && !url.path.hasSuffix("css") && !url.path.hasSuffix("js") && !url.path.hasSuffix("woff") {
-            print("\(url), \(url.pathExtension)")
+            print("try to load -> \(url), \(url.pathExtension)")
             return true
         }
         return false

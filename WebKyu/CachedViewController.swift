@@ -69,11 +69,15 @@ class CachedViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     lazy var toolView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        let button = UIButton(frame: CGRect(x: 270, y: 0, width: 50, height: 50))
+        view.backgroundColor = .white
+
+        let button = UIButton.init(type: .system)
+        button.contentEdgeInsets = .init(top: 0, left: 8, bottom: 0, right: 8)
         button.addTarget(self, action: #selector(share(_:)), for: UIControl.Event.touchUpInside)
+        button.setTitle("Share or Save", for: .normal)
+
         view.addSubview(button)
         button.snp.makeConstraints({ (make) in
-            make.width.equalTo(50)
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(view.snp.top)
             make.bottom.equalTo(view.snp.bottom)
@@ -94,11 +98,11 @@ class CachedViewController: UIViewController, UICollectionViewDataSource, UIColl
             return
         }
 
-        let path = imageCache.cachePath(forKey: url.absoluteString)
-        guard let image = UIImage(contentsOfFile: path) else {
+//        let path = imageCache.cachePath(forKey: url.absoluteString)
+        guard let data = try? Data.init(contentsOf: url) else {//}(contentsOfFile: path) else {
             return
         }
-        let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let activity = UIActivityViewController(activityItems: [data], applicationActivities: nil)
         browser.present(activity, animated: true, completion: nil)
 //        let alert = UIAlertController(title: "a", message: "message", preferredStyle: .actionSheet)
 //        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -148,7 +152,14 @@ extension CachedViewController: PhotoBrowserDelegate {
 
     /// 长按时回调。可选
     func photoBrowser(_ photoBrowser: PhotoBrowser, didLongPressForIndex index: Int, image: UIImage) {
-
+        let url = images[index].url
+        do {
+            let data = try Data(contentsOf: url)
+            let activity = UIActivityViewController(activityItems: [ data ], applicationActivities: nil)
+            present(activity, animated: true, completion: nil)
+        } catch {
+            print("error")
+        }
     }
 
 }
